@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class TreeSpawner : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] private GameObject _treePrefab;
+    [SerializeField] private float _treeSpeed;
+
     void Start()
+    {
+        SpawnTree();
+    }
+
+    void Update()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    private void SpawnTree()
     {
-        
+        var tree = Instantiate( _treePrefab, this.transform.position, Quaternion.identity);
     }
 }

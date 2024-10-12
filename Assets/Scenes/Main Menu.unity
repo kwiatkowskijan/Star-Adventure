@@ -459,7 +459,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 527769137}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1871764235}
+        m_TargetAssemblyTypeName: MainMenuController, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &527769137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1159,6 +1171,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1871764233}
   - component: {fileID: 1871764234}
+  - component: {fileID: 1871764235}
   m_Layer: 5
   m_Name: Buttons
   m_TagString: Untagged
@@ -1214,6 +1227,18 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &1871764235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871764232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73c4a0d3059f25841aeb8c72d24682ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1957506937
 GameObject:
   m_ObjectHideFlags: 0

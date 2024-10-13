@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spawner : MonoBehaviour
+public class Spawner : MonoBehaviour, IGameEndListener
 {
     [SerializeField] private List<GameObject> _asteroidPrefabs = new List<GameObject>();
     [SerializeField] private float _baseAsteroidSpeed;
@@ -13,6 +13,7 @@ public class Spawner : MonoBehaviour
     [SerializeField] private float _spawnIntervalScaleFactor = 0.001f; // Jak szybko zmniejsza siê interwa³ w zale¿noœci od dystansu
     [SerializeField] private int _spawnMaxY;
     [SerializeField] private int _spawnMinY;
+    private bool _isGameEnded = false;
 
     private float _currentAsteroidSpeed;
     private float _currentSpawnInterval;
@@ -22,6 +23,7 @@ public class Spawner : MonoBehaviour
     {
         _currentAsteroidSpeed = _baseAsteroidSpeed;
         _currentSpawnInterval = _baseSpawnInterval;
+        GameManager.Instance.RegisterListener(this);
     }
 
     private void Update()
@@ -55,11 +57,16 @@ public class Spawner : MonoBehaviour
         _timeSinceLastSpawn += Time.deltaTime;
 
         // Sprawdzenie, czy min¹³ czas na spawnowanie nowej asteroidy
-        if (_timeSinceLastSpawn >= _currentSpawnInterval)
+        if (_timeSinceLastSpawn >= _currentSpawnInterval && !_isGameEnded)
         {
             SpawnAsteroid();
             _timeSinceLastSpawn = 0f; // Zresetuj czas od ostatniego spawnu
         }
 
+    }
+
+    public void OnGameEnd()
+    {
+        _isGameEnded = true;
     }
 }

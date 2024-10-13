@@ -11,7 +11,8 @@ public class Asteroid : MonoBehaviour
     private Animator _animator;
     private int point = 1;
     private bool _dead = false;
-
+    private Vector2 _direction;
+    private int _damage = 1;
 
     private void Awake()
     {
@@ -32,10 +33,12 @@ public class Asteroid : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
-            Debug.Log("trafiono");
             Bullet bullet = collision.gameObject.GetComponent<Bullet>();
             GetDamage(bullet.damage);
         }
+
+        if (collision.gameObject.CompareTag("Player"))
+            GameManager.Instance.PlayerHealth -= _damage;
     }
 
     public void Initialize(GameObject player, float speed)
@@ -54,8 +57,15 @@ public class Asteroid : MonoBehaviour
     private void ShootAsteroid()
     {
         var step = _asteroidSpeed * Time.deltaTime;
-        transform.position = Vector2.MoveTowards(transform.position, _lastPlayerPosition, step);
+
+        if (_direction == Vector2.zero)
+        {
+            _direction = (_lastPlayerPosition - (Vector2)transform.position).normalized;
+        }
+
+        transform.position += (Vector3)(_direction * step);
     }
+
 
     public void GetDamage(int damage)
     {

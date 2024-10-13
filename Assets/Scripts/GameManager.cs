@@ -20,7 +20,6 @@ public class GameManager
     public int Points
     {
         get { return _points; }
-
         set { _points = value; }
     }
 
@@ -28,13 +27,48 @@ public class GameManager
     public float DistanceTravelled
     {
         get { return _distanceTravelled; }
-
         set { _distanceTravelled = value; }
     }
+
+    private int _playerHealth;
+
+    public int PlayerHealth
+    {
+        get { return _playerHealth; }
+        set { 
+            _playerHealth = value;
+            
+            if (_playerHealth <= 0)
+                EndGame();
+        }
+    }
+
+    private List<IGameEndListener> _endListeners = new List<IGameEndListener>();
 
     private GameManager()
     {
         _points = 0;
+        _distanceTravelled = 0;
+        _playerHealth = 1;
     }
 
+    public void RegisterListener(IGameEndListener listener)
+    {
+        _endListeners.Add(listener);
+    }
+
+    public void UnregisterListener(IGameEndListener listener)
+    {
+        _endListeners.Remove(listener);
+    }
+
+    void EndGame()
+    {
+        Debug.Log("KONIEC");
+
+        foreach (var listener in _endListeners)
+        {
+            listener.OnGameEnd();
+        }
+    }
 }

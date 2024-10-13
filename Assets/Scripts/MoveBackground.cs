@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveBackground : MonoBehaviour
+public class MoveBackground : MonoBehaviour, IGameEndListener
 {
     [SerializeField] private float _speed;
     private Vector2 _startPosition;
@@ -12,6 +12,7 @@ public class MoveBackground : MonoBehaviour
     {
         _startPosition = transform.position;
         _repeatWidth = GetComponent<BoxCollider2D>().size.x * .5f;
+        GameManager.Instance.RegisterListener(this);
     }
     private void Update()
     {
@@ -36,5 +37,15 @@ public class MoveBackground : MonoBehaviour
     private void CountDistance()
     {
         GameManager.Instance.DistanceTravelled += _speed * Time.deltaTime;
+    }
+
+    private void StopBg()
+    {
+        _speed = 0;
+    }
+
+    public void OnGameEnd()
+    {
+        StopBg();
     }
 }

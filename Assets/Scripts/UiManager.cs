@@ -3,10 +3,16 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class UiManager : MonoBehaviour
+public class UiManager : MonoBehaviour, IGameEndListener
 {
     [SerializeField] private TMP_Text _points;
     [SerializeField] private TMP_Text _distanceTravelled;
+    [SerializeField] private GameObject _endGameScreen;
+
+    private void Start()
+    {
+        GameManager.Instance.RegisterListener(this);
+    }
 
     private void Update()
     {
@@ -14,13 +20,24 @@ public class UiManager : MonoBehaviour
         UpdateDistanceTravlled();
     }
 
-    void UpdatePoints()
+    private void UpdatePoints()
     {
         _points.SetText(GameManager.Instance.Points.ToString());
     }
 
-    void UpdateDistanceTravlled()
+    private void UpdateDistanceTravlled()
     {
         _distanceTravelled.SetText(GameManager.Instance.DistanceTravelled.ToString("0") + " m");
     }
+
+    private void EndGameScreen()
+    {
+        _endGameScreen.SetActive(true);
+    }
+
+    public void OnGameEnd()
+    {
+        EndGameScreen();
+    }
+
 }

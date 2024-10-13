@@ -10,10 +10,13 @@ public class PlayerShooting : MonoBehaviour
     [HideInInspector] public Vector3 _mousePosition;
     [SerializeField] private float _cooldown;
     private float _cooldownTime;
+    [SerializeField] private AudioClip _shootingSFX;
+    private AudioSource _audioSource;
 
     private void Awake()
     {
         _bulletSpawner = GetComponent<BulletSpawner>();
+        _audioSource = GetComponent<AudioSource>();
     }
     void Update()
     {
@@ -26,6 +29,8 @@ public class PlayerShooting : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && GetCooldown() >= _cooldown)
         {
             _cooldownTime = 0;
+            AssignClip(_shootingSFX);
+            PlayAudio();
             Shoot();
         }
     }
@@ -40,5 +45,15 @@ public class PlayerShooting : MonoBehaviour
     {
         _cooldownTime += Time.deltaTime;
         return _cooldownTime;
+    }
+
+    private void AssignClip(AudioClip clip)
+    {
+        _audioSource.clip = clip;
+    }
+
+    private void PlayAudio()
+    {
+        _audioSource.Play();
     }
 }

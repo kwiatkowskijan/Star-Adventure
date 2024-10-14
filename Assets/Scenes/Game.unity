@@ -423,7 +423,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 6
+  orthographic size: 5.625
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1371,9 +1371,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _asteroidPrefabs:
-  - {fileID: 2257881817137281131, guid: ae0bb2ff4eede694585d13ff20339dca, type: 3}
-  _baseAsteroidSpeed: 4
+  - {fileID: 3451301594590103630, guid: ae0bb2ff4eede694585d13ff20339dca, type: 3}
   _player: {fileID: 716155589}
+  _baseAsteroidSpeed: 4
   _baseSpawnInterval: 4
   _spawnIntervalMin: 0.5
   _speedScaleFactor: 0.001
@@ -2007,6 +2007,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _treePrefab: {fileID: 2822313670965812500, guid: 0b108a216eee3c4408e7519d5fc2cecb, type: 3}
   _treeSpeed: 10
+  _baseSpawnInterval: 5
+  _spawnIntervalMin: 0.5
+  _spawnIntervalScaleFactor: 0.001
 --- !u!1001 &1871312673
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Pool;
 
 public class Asteroid : MonoBehaviour
 {
@@ -13,10 +14,13 @@ public class Asteroid : MonoBehaviour
     private bool _dead = false;
     private Vector2 _direction;
     private int _damage = 1;
+    private ObjectPool<Asteroid> _pool;
+    public CircleCollider2D _circleCollider;
 
     private void Awake()
     {
         _animator = GetComponent<Animator>();
+        _circleCollider = GetComponent<CircleCollider2D>();
     }
 
     private void Start()
@@ -39,6 +43,11 @@ public class Asteroid : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Player"))
             GameManager.Instance.PlayerHealth -= _damage;
+    }
+
+    public void SetPool(ObjectPool<Asteroid> pool)
+    {
+        _pool = pool;
     }
 
     public void Initialize(GameObject player, float speed)
@@ -79,7 +88,8 @@ public class Asteroid : MonoBehaviour
     {
         if(!_dead)
             GameManager.Instance.Points += point;
-        
+
+        this._circleCollider.enabled = false;
         _dead = true;
         _animator.SetTrigger("Death");
         Invoke("Destroy", 0.7f);
@@ -87,11 +97,11 @@ public class Asteroid : MonoBehaviour
 
     private void Destroy()
     {
-        Destroy(this.gameObject);
+        _pool.Release(this);
     }
 
     private void OnBecameInvisible()
     {
-        Destroy(this.gameObject);
+        //_pool.Release(this);
     }
 }

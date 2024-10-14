@@ -8,9 +8,9 @@ public class Spawner : MonoBehaviour, IGameEndListener
     [SerializeField] private float _baseAsteroidSpeed;
     [SerializeField] private GameObject _player;
     [SerializeField] private float _baseSpawnInterval;
-    [SerializeField] private float _spawnIntervalMin = 0.5f; // Minimalny interwa³ spawnu
-    [SerializeField] private float _speedScaleFactor = 0.01f; // Jak szybko roœnie prêdkoœæ w zale¿noœci od dystansu
-    [SerializeField] private float _spawnIntervalScaleFactor = 0.001f; // Jak szybko zmniejsza siê interwa³ w zale¿noœci od dystansu
+    [SerializeField] private float _spawnIntervalMin = 0.5f;
+    [SerializeField] private float _speedScaleFactor = 0.01f;
+    [SerializeField] private float _spawnIntervalScaleFactor = 0.001f;
     [SerializeField] private int _spawnMaxY;
     [SerializeField] private int _spawnMinY;
     private bool _isGameEnded = false;
@@ -56,11 +56,10 @@ public class Spawner : MonoBehaviour, IGameEndListener
         _currentSpawnInterval = Mathf.Max(_spawnIntervalMin, _baseSpawnInterval - (distanceTravelled * _spawnIntervalScaleFactor));
         _timeSinceLastSpawn += Time.deltaTime;
 
-        // Sprawdzenie, czy min¹³ czas na spawnowanie nowej asteroidy
         if (_timeSinceLastSpawn >= _currentSpawnInterval && !_isGameEnded)
         {
             SpawnAsteroid();
-            _timeSinceLastSpawn = 0f; // Zresetuj czas od ostatniego spawnu
+            _timeSinceLastSpawn = 0f; 
         }
 
     }

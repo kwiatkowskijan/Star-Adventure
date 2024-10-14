@@ -1008,6 +1008,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 8
+  _deathClip: {fileID: 8300000, guid: 6026dce1ee812a649affd5f6000e6b59, type: 3}
 --- !u!50 &716155592
 Rigidbody2D:
   serializedVersion: 4
@@ -2005,7 +2006,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _treePrefab: {fileID: 2822313670965812500, guid: 0b108a216eee3c4408e7519d5fc2cecb, type: 3}
-  _treeSpeed: 0
+  _treeSpeed: 10
 --- !u!1001 &1871312673
 PrefabInstance:
   m_ObjectHideFlags: 0

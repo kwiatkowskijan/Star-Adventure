@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Tree : MonoBehaviour
 {
-    [SerializeField] float _treeSpeed;
+    [HideInInspector] public float treeSpeed;
     void Start()
     {
         
@@ -17,6 +17,10 @@ public class Tree : MonoBehaviour
 
     private void MoveTree()
     {
-        transform.position += new Vector3(-_treeSpeed * Time.deltaTime, 0, 0);
+        transform.position += new Vector3(-treeSpeed * Time.deltaTime, 0, 0);
+    }
+    private void OnBecameInvisible()
+    {
+        Destroy(this.gameObject);
     }
 }

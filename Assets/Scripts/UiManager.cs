@@ -37,7 +37,7 @@ public class UiManager : MonoBehaviour, IGameEndListener
 
     public void OnGameEnd()
     {
-        EndGameScreen();
+        Invoke("EndGameScreen", 2f);
     }
 
 }

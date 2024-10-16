@@ -64,8 +64,6 @@ public class GameManager
 
     void EndGame()
     {
-        Debug.Log("KONIEC");
-
         foreach (var listener in _endListeners)
         {
             listener.OnGameEnd();

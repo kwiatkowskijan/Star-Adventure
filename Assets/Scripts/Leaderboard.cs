@@ -7,9 +7,14 @@ using Dan.Main;
 public class Leaderboard : MonoBehaviour
 {
     [SerializeField] private List<TextMeshProUGUI> _names;
-    [SerializeField] private List<TextMeshProUGUI> _scores;
+    [SerializeField] private List<TextMeshProUGUI> _distances;
 
     private string _leaderboardPublicKey = "8a08b07858bf8aab8497541a32bac1d9dddd7236afc0de9b402dcd422dbbd874";
+
+    private void Start()
+    {
+        GetLeaderboard();
+    }
 
     public void GetLeaderboard()
     {
@@ -20,7 +25,7 @@ public class Leaderboard : MonoBehaviour
             for (int i = 0; i < loopLength; ++i)
             {
                 _names[i].text = msg[i].Username;
-                _scores[i].text = msg[i].Score.ToString();
+                _distances[i].text = msg[i].Score.ToString();
             }
         }));
     }

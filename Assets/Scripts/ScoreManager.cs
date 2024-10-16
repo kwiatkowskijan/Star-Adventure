@@ -6,14 +6,17 @@ using UnityEngine.Events;
 
 public class ScoreManager : MonoBehaviour
 {
-    private float _score;
+    private float _distance;
     [SerializeField] private TMP_InputField _name;
 
     public UnityEvent<string, int> submitScoreEvent;
 
     public void SubmitScore()
     {
-        _score = GameManager.Instance.DistanceTravelled;
-        submitScoreEvent.Invoke(_name.text, (int)_score);
+        _distance = GameManager.Instance.DistanceTravelled;
+
+        Debug.Log(_name + ": " + _distance);
+
+        submitScoreEvent.Invoke(_name.text, (int)_distance);
     }
 }

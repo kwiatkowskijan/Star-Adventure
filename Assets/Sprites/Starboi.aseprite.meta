@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8654ae6f1332f3e459b7f0bedc29998c
+guid: b883ce86b90ee7e4caccdc73442380d3
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects:
@@ -129,9 +129,9 @@ ScriptedImporter:
     customPivotPosition: {x: 0.5, y: 0.5}
     mosaicPadding: 4
     spritePadding: 0
-    generateModelPrefab: 0
+    generateModelPrefab: 1
     generateAnimationClips: 1
-    addSortingGroup: 0
+    addSortingGroup: 1
     addShadowCasters: 0
   asepriteImporterSettings:
     fileImportMode: 1
@@ -142,12 +142,12 @@ ScriptedImporter:
     customPivotPosition: {x: 0.5, y: 0.5}
     mosaicPadding: 4
     spritePadding: 0
-    generateModelPrefab: 0
+    generateModelPrefab: 1
     generateAnimationClips: 1
-    addSortingGroup: 0
+    addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638641797769711124
+  platformSettingsDirtyTick: 638647743255172570
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -171,7 +171,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: starboi (3)_Frame_0
+  - name: Starboi_Frame_0
     originalName: 
     pivot: {x: 0.5, y: -0.5}
     alignment: 9
@@ -182,7 +182,7 @@ ScriptedImporter:
       y: 114
       width: 16
       height: 16
-    spriteID: 727753c7aa647c0458dea299cb815925
+    spriteID: 03589e26115a6a34a8540523944f4c79
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -191,7 +191,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 114}
-  - name: starboi (3)_Frame_1
+  - name: Starboi_Frame_1
     originalName: 
     pivot: {x: 0.5, y: -0.61538464}
     alignment: 9
@@ -202,7 +202,7 @@ ScriptedImporter:
       y: 100
       width: 16
       height: 13
-    spriteID: 58cfce6b060d98349aee12d3325f4d8b
+    spriteID: 8eaf3ab68ae3a8942b9809ff14d5507c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -211,7 +211,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 92, y: 100}
-  - name: starboi (3)_Frame_2
+  - name: Starboi_Frame_2
     originalName: 
     pivot: {x: 0.5, y: -0.5}
     alignment: 9
@@ -222,7 +222,7 @@ ScriptedImporter:
       y: 138
       width: 16
       height: 16
-    spriteID: 0618f5f6136ba3d44bc2e1f3c8b0ae50
+    spriteID: b45c112b9f8c76b45be1bdf8ef6bed44
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -231,7 +231,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 138}
-  - name: starboi (3)_Frame_3
+  - name: Starboi_Frame_3
     originalName: 
     pivot: {x: 0.5, y: -0.61538464}
     alignment: 9
@@ -242,7 +242,7 @@ ScriptedImporter:
       y: 121
       width: 16
       height: 13
-    spriteID: 810323a6fba3d994688b808bd25a973f
+    spriteID: 9c30bf1fb6cbf734eafcc5ad3717a3fc
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -251,7 +251,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 92, y: 121}
-  - name: starboi (3)_Frame_4
+  - name: Starboi_Frame_4
     originalName: 
     pivot: {x: 0.5, y: -0.6875}
     alignment: 9
@@ -262,7 +262,7 @@ ScriptedImporter:
       y: 162
       width: 16
       height: 16
-    spriteID: ded8561aa88cd024c96875f2239bcbd6
+    spriteID: 15b77c6839a446946b1048d534a003b0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -271,7 +271,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 162}
-  - name: starboi (3)_Frame_5
+  - name: Starboi_Frame_5
     originalName: 
     pivot: {x: 0.5, y: -0.5}
     alignment: 9
@@ -282,7 +282,7 @@ ScriptedImporter:
       y: 186
       width: 16
       height: 16
-    spriteID: 9dc95f4d28996b747a8ab918a6aa5309
+    spriteID: 11490fa61c1eb1247a30e1121b3428ed
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -291,7 +291,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 186}
-  - name: starboi (3)_Frame_6
+  - name: Starboi_Frame_6
     originalName: 
     pivot: {x: 0.5, y: -0.61538464}
     alignment: 9
@@ -302,7 +302,7 @@ ScriptedImporter:
       y: 142
       width: 16
       height: 13
-    spriteID: f585728347b86214db871ed6306cbd6f
+    spriteID: 76c457dc70256b04db61fd9e23735676
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -311,7 +311,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 92, y: 142}
-  - name: starboi (3)_Frame_7
+  - name: Starboi_Frame_7
     originalName: 
     pivot: {x: 0.5, y: -0.6875}
     alignment: 9
@@ -322,7 +322,7 @@ ScriptedImporter:
       y: 210
       width: 16
       height: 16
-    spriteID: 29fa6668cc841704aab242afda7179b1
+    spriteID: a2f65415e2f8ee24ba76a64aff67d76c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -331,7 +331,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 210}
-  - name: starboi (3)_Frame_8
+  - name: Starboi_Frame_8
     originalName: 
     pivot: {x: 0.5, y: -0.5}
     alignment: 9
@@ -342,7 +342,7 @@ ScriptedImporter:
       y: 234
       width: 16
       height: 16
-    spriteID: b01c3b9a3f5952f4c93cece6ba0a100c
+    spriteID: 09075f8202c81a14d8adfdd8de12e719
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -351,7 +351,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 234}
-  - name: starboi (3)_Frame_9
+  - name: Starboi_Frame_9
     originalName: 
     pivot: {x: 0.5, y: -0.61538464}
     alignment: 9
@@ -362,7 +362,7 @@ ScriptedImporter:
       y: 163
       width: 16
       height: 13
-    spriteID: 43c211dc6c819d446aac17bd948f2618
+    spriteID: 58ef65511821cd744a868d98670eeaae
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -371,7 +371,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 92, y: 163}
-  - name: starboi (3)_Frame_10
+  - name: Starboi_Frame_10
     originalName: 
     pivot: {x: 0.5, y: -0.5}
     alignment: 9
@@ -382,7 +382,7 @@ ScriptedImporter:
       y: 4
       width: 16
       height: 16
-    spriteID: e1655946c1825a94baef5476463295d2
+    spriteID: 21d42f84848e34440a2b60d0635861d6
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -391,7 +391,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 44, y: 4}
-  - name: starboi (3)_Frame_11
+  - name: Starboi_Frame_11
     originalName: 
     pivot: {x: 0.5, y: -0.6875}
     alignment: 9
@@ -402,7 +402,7 @@ ScriptedImporter:
       y: 28
       width: 16
       height: 16
-    spriteID: 82266017f1266ad4c81f786e123d7e5e
+    spriteID: 5c36fe93d74446242aad537ce2ee0b62
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -411,7 +411,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 44, y: 28}
-  - name: starboi (3)_Frame_12
+  - name: Starboi_Frame_12
     originalName: 
     pivot: {x: 0.5, y: -0.5}
     alignment: 9
@@ -422,7 +422,7 @@ ScriptedImporter:
       y: 52
       width: 16
       height: 16
-    spriteID: 92b2f1834f5f79d4ca8e51b7932a57d3
+    spriteID: 0d1ff75ac46d1e149879cd21f96e494f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -431,7 +431,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 44, y: 52}
-  - name: starboi (3)_Frame_13
+  - name: Starboi_Frame_13
     originalName: 
     pivot: {x: 0.625, y: -0.5}
     alignment: 9
@@ -442,7 +442,7 @@ ScriptedImporter:
       y: 76
       width: 16
       height: 16
-    spriteID: 92ba941bec3388b40b1c544c6756f269
+    spriteID: faccbf17693cded42a8c9600d6a47d0d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -451,7 +451,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 44, y: 76}
-  - name: starboi (3)_Frame_14
+  - name: Starboi_Frame_14
     originalName: 
     pivot: {x: 0.79310346, y: -0.4}
     alignment: 9
@@ -462,7 +462,7 @@ ScriptedImporter:
       y: 34
       width: 29
       height: 20
-    spriteID: 1b968f6c2a34f5645a69d9fb1d49f567
+    spriteID: fb23e23eeece1ea4db48a3e0d97f8908
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -471,7 +471,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 34}
-  - name: starboi (3)_Frame_15
+  - name: Starboi_Frame_15
     originalName: 
     pivot: {x: 0.8125, y: -0.36363637}
     alignment: 9
@@ -482,7 +482,7 @@ ScriptedImporter:
       y: 4
       width: 32
       height: 22
-    spriteID: c106af94db2537a448281598595d1e70
+    spriteID: c01399ce48b6bce4998bbdce08f74075
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -491,7 +491,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: starboi (3)_Frame_16
+  - name: Starboi_Frame_16
     originalName: 
     pivot: {x: 0.8125, y: -0.44444445}
     alignment: 9
@@ -502,7 +502,7 @@ ScriptedImporter:
       y: 62
       width: 32
       height: 18
-    spriteID: 6ff7a25406a272f418f23a52388e4a0c
+    spriteID: 551066f2a87866c43a556a5bbfc4d87a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -511,7 +511,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 62}
-  - name: starboi (3)_Frame_17
+  - name: Starboi_Frame_17
     originalName: 
     pivot: {x: 0.8000001, y: -0.44444445}
     alignment: 9
@@ -522,7 +522,7 @@ ScriptedImporter:
       y: 88
       width: 30
       height: 18
-    spriteID: d3ff5092e42f4b84196989bf00731e0c
+    spriteID: e5aa3fac710a07949976326d3a301b21
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -531,7 +531,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 88}
-  - name: starboi (3)_Frame_18
+  - name: Starboi_Frame_18
     originalName: 
     pivot: {x: 0.61538464, y: -5}
     alignment: 9
@@ -542,7 +542,7 @@ ScriptedImporter:
       y: 244
       width: 13
       height: 3
-    spriteID: e0f0799a945478d478f1d9edc8542b46
+    spriteID: 98c41d96fa281d145930d53856c226e8
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -551,7 +551,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 44, y: 244}
-  - name: starboi (3)_Frame_19
+  - name: Starboi_Frame_19
     originalName: 
     pivot: {x: 0.33333334, y: -5}
     alignment: 9
@@ -562,7 +562,7 @@ ScriptedImporter:
       y: 100
       width: 3
       height: 3
-    spriteID: be6c37a1036eb274ea84e5d519ba1128
+    spriteID: 89c714a29a386794d82ffc87cc81e74c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -571,7 +571,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 116, y: 100}
-  - name: starboi (3)_Frame_20
+  - name: Starboi_Frame_20
     originalName: 
     pivot: {x: 0.42857146, y: -1.8571429}
     alignment: 9
@@ -582,7 +582,7 @@ ScriptedImporter:
       y: 245
       width: 7
       height: 7
-    spriteID: 10ce6bf616cd9a347910e559cdbc49de
+    spriteID: 8e4f43949cb90b543b5c719fbdfe99af
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -591,7 +591,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 92, y: 245}
-  - name: starboi (3)_Frame_21
+  - name: Starboi_Frame_21
     originalName: 
     pivot: {x: 0.45454547, y: -1}
     alignment: 9
@@ -602,7 +602,7 @@ ScriptedImporter:
       y: 226
       width: 11
       height: 11
-    spriteID: 41aac4a52a5801546bf12ec081ef8378
+    spriteID: f563b2b4009bcd149a65df0130895543
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -611,7 +611,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 92, y: 226}
-  - name: starboi (3)_Frame_22
+  - name: Starboi_Frame_22
     originalName: 
     pivot: {x: 0.5, y: -0.61538464}
     alignment: 9
@@ -622,7 +622,7 @@ ScriptedImporter:
       y: 184
       width: 16
       height: 13
-    spriteID: 4941cd993359ede43ba90d7f265c739f
+    spriteID: d60ec57d7844b8b4aa4db68ba9d43356
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -631,7 +631,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 92, y: 184}
-  - name: starboi (3)_Frame_23
+  - name: Starboi_Frame_23
     originalName: 
     pivot: {x: 0.5, y: -0.61538464}
     alignment: 9
@@ -642,7 +642,7 @@ ScriptedImporter:
       y: 205
       width: 16
       height: 13
-    spriteID: 23eaa5ad4b9383942bc73197d4d90145
+    spriteID: 759ed0a99affe164ab4ef59dcdfc746e
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -651,7 +651,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 92, y: 205}
-  - name: starboi (3)_Frame_24
+  - name: Starboi_Frame_24
     originalName: 
     pivot: {x: 0.45454547, y: -1}
     alignment: 9
@@ -662,7 +662,7 @@ ScriptedImporter:
       y: 226
       width: 11
       height: 11
-    spriteID: e0002de7106e980489e1184657d2bd32
+    spriteID: dd6f3fbfae43a5949ac8ac7d5b944579
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -671,7 +671,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 111, y: 226}
-  - name: starboi (3)_Frame_25
+  - name: Starboi_Frame_25
     originalName: 
     pivot: {x: 0.42857146, y: -1.8571429}
     alignment: 9
@@ -682,7 +682,7 @@ ScriptedImporter:
       y: 245
       width: 7
       height: 7
-    spriteID: 1a9a1643c3c5dd546a494a5e65a5e94f
+    spriteID: 3ba38b786d3403f4ba8b6bcae4bef8ed
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -691,7 +691,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 111, y: 245}
-  - name: starboi (3)_Frame_26
+  - name: Starboi_Frame_26
     originalName: 
     pivot: {x: 0.33333334, y: -5}
     alignment: 9
@@ -702,7 +702,7 @@ ScriptedImporter:
       y: 121
       width: 3
       height: 3
-    spriteID: 71a5ac71916f2f04886d9ef13f56ab73
+    spriteID: 8fbc216d57af6734b92de3aa648a837b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -711,7 +711,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 116, y: 121}
-  - name: starboi (3)_Frame_28
+  - name: Starboi_Frame_28
     originalName: 
     pivot: {x: 0.5, y: -0.5}
     alignment: 9
@@ -722,7 +722,7 @@ ScriptedImporter:
       y: 100
       width: 16
       height: 16
-    spriteID: 144fda5ca55b9ec41a0804e591e6d764
+    spriteID: 6f888c00c3b505542be1ef5889b1ab80
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -731,7 +731,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 44, y: 100}
-  - name: starboi (3)_Frame_29
+  - name: Starboi_Frame_29
     originalName: 
     pivot: {x: 0.5, y: -0.5}
     alignment: 9
@@ -742,7 +742,7 @@ ScriptedImporter:
       y: 220
       width: 14
       height: 16
-    spriteID: 8aec656fef2f61b4a942e96f4a2a4cc9
+    spriteID: d252f6a07351a8b4a89a04fb509dc85a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -751,7 +751,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 68, y: 220}
-  - name: starboi (3)_Frame_30
+  - name: Starboi_Frame_30
     originalName: 
     pivot: {x: 0.5, y: -0.5}
     alignment: 9
@@ -762,7 +762,7 @@ ScriptedImporter:
       y: 124
       width: 16
       height: 16
-    spriteID: 8975e434c6748304b9e10d6a75b078f8
+    spriteID: 73db1dca5753df147afb8ef43c636dab
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -771,7 +771,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 44, y: 124}
-  - name: starboi (3)_Frame_31
+  - name: Starboi_Frame_31
     originalName: 
     pivot: {x: 0.5, y: -0.5}
     alignment: 9
@@ -782,7 +782,7 @@ ScriptedImporter:
       y: 148
       width: 16
       height: 16
-    spriteID: a99a1b23781a5b8429f1c94d86fdcab0
+    spriteID: be91bdbead2f82148868d8d8e60cc688
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -791,7 +791,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 44, y: 148}
-  - name: starboi (3)_Frame_32
+  - name: Starboi_Frame_32
     originalName: 
     pivot: {x: 0.5, y: -0.5}
     alignment: 9
@@ -802,7 +802,7 @@ ScriptedImporter:
       y: 4
       width: 14
       height: 16
-    spriteID: e5b643c15ae2803478860ddeab9023d6
+    spriteID: 77accc647aa4f0f4592ebbcb9b855ca7
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -811,7 +811,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 92, y: 4}
-  - name: starboi (3)_Frame_33
+  - name: Starboi_Frame_33
     originalName: 
     pivot: {x: 0.5, y: -0.5}
     alignment: 9
@@ -822,7 +822,7 @@ ScriptedImporter:
       y: 172
       width: 16
       height: 16
-    spriteID: 14ac20392d9ad974fbe2a1088e217e49
+    spriteID: c66a4a04e4d13c047babc672a8cfb956
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -831,7 +831,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 44, y: 172}
-  - name: starboi (3)_Frame_34
+  - name: Starboi_Frame_34
     originalName: 
     pivot: {x: 0.5, y: -0.5}
     alignment: 9
@@ -842,7 +842,7 @@ ScriptedImporter:
       y: 196
       width: 16
       height: 16
-    spriteID: 9ad430a7bf9596d48af773cefaa9de11
+    spriteID: 7dc39a391da395d45a6ab6a403037ffe
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -851,7 +851,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 44, y: 196}
-  - name: starboi (3)_Frame_35
+  - name: Starboi_Frame_35
     originalName: 
     pivot: {x: 0.5, y: -0.5}
     alignment: 9
@@ -862,7 +862,7 @@ ScriptedImporter:
       y: 220
       width: 16
       height: 16
-    spriteID: 56283638f3ecb1346ade7b78afe0661b
+    spriteID: 1f7bd0c780b62af4a8b5bc1c15cce535
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -871,7 +871,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 44, y: 220}
-  - name: starboi (3)_Frame_36
+  - name: Starboi_Frame_36
     originalName: 
     pivot: {x: 0.5, y: -0.5}
     alignment: 9
@@ -882,7 +882,7 @@ ScriptedImporter:
       y: 4
       width: 16
       height: 16
-    spriteID: c5a44ec1db98df64f85cd439684918ba
+    spriteID: d7a3714c965965f44a7a4b89c7fed1ab
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -891,7 +891,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 68, y: 4}
-  - name: starboi (3)_Frame_37
+  - name: Starboi_Frame_37
     originalName: 
     pivot: {x: 0.5, y: -0.5}
     alignment: 9
@@ -902,7 +902,7 @@ ScriptedImporter:
       y: 28
       width: 16
       height: 16
-    spriteID: 71ba2230a4b22824d839c839a0a83e63
+    spriteID: c93fab80af776b14d88a47019840f59c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -911,7 +911,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 68, y: 28}
-  - name: starboi (3)_Frame_38
+  - name: Starboi_Frame_38
     originalName: 
     pivot: {x: 0.5, y: -0.5}
     alignment: 9
@@ -922,7 +922,7 @@ ScriptedImporter:
       y: 52
       width: 16
       height: 16
-    spriteID: 8f50f94bc06827a409d2bfe034479ad8
+    spriteID: 87aa94f3fa4f474479f1fbc6301ae9cf
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -931,7 +931,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 68, y: 52}
-  - name: starboi (3)_Frame_39
+  - name: Starboi_Frame_39
     originalName: 
     pivot: {x: 0.5, y: -0.5}
     alignment: 9
@@ -942,7 +942,7 @@ ScriptedImporter:
       y: 76
       width: 16
       height: 16
-    spriteID: fa3f01ad884b6b349aebaae653293ce0
+    spriteID: 1523ba1f282cf1a49a8dc36c58726a1d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -951,7 +951,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 68, y: 76}
-  - name: starboi (3)_Frame_40
+  - name: Starboi_Frame_40
     originalName: 
     pivot: {x: 0.53333336, y: -0.5}
     alignment: 9
@@ -962,7 +962,7 @@ ScriptedImporter:
       y: 100
       width: 15
       height: 16
-    spriteID: 95d23a1d7cc2cca4eb3c976055b26d0e
+    spriteID: 895320c14eecba74583bb1a338c44994
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -971,7 +971,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 68, y: 100}
-  - name: starboi (3)_Frame_41
+  - name: Starboi_Frame_41
     originalName: 
     pivot: {x: 0.5, y: -0.5}
     alignment: 9
@@ -982,7 +982,7 @@ ScriptedImporter:
       y: 28
       width: 14
       height: 16
-    spriteID: fe25189daff979a49b459aca7cd3732e
+    spriteID: 1ee58c5b95abc48449937b45742fc05a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -991,7 +991,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 92, y: 28}
-  - name: starboi (3)_Frame_42
+  - name: Starboi_Frame_42
     originalName: 
     pivot: {x: 0.53333336, y: -0.5}
     alignment: 9
@@ -1002,7 +1002,7 @@ ScriptedImporter:
       y: 124
       width: 15
       height: 16
-    spriteID: 12a6ed336da30134da5cc71509875eac
+    spriteID: f09ac6c6859f389429a335b4f48fc047
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1011,7 +1011,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 68, y: 124}
-  - name: starboi (3)_Frame_43
+  - name: Starboi_Frame_43
     originalName: 
     pivot: {x: 0.5, y: -0.5}
     alignment: 9
@@ -1022,7 +1022,7 @@ ScriptedImporter:
       y: 52
       width: 14
       height: 16
-    spriteID: e00635d78bc023149a183b937d8b27f4
+    spriteID: 611a7c1ed31b05f4bb1507243d54e42f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1031,7 +1031,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 92, y: 52}
-  - name: starboi (3)_Frame_44
+  - name: Starboi_Frame_44
     originalName: 
     pivot: {x: 0.53333336, y: -0.5}
     alignment: 9
@@ -1042,7 +1042,7 @@ ScriptedImporter:
       y: 148
       width: 15
       height: 16
-    spriteID: 70fb913b369eae240bf1d1c27c45d528
+    spriteID: 76af49e950518124bae1de204533e3c5
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1051,7 +1051,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 68, y: 148}
-  - name: starboi (3)_Frame_45
+  - name: Starboi_Frame_45
     originalName: 
     pivot: {x: 0.5, y: -0.5}
     alignment: 9
@@ -1062,7 +1062,7 @@ ScriptedImporter:
       y: 76
       width: 14
       height: 16
-    spriteID: 18a8b94d4262310488b48f4ac1b7a1dd
+    spriteID: 57942759647892844894a053cba246c9
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1071,7 +1071,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 92, y: 76}
-  - name: starboi (3)_Frame_46
+  - name: Starboi_Frame_46
     originalName: 
     pivot: {x: 0.53333336, y: -0.5}
     alignment: 9
@@ -1082,7 +1082,7 @@ ScriptedImporter:
       y: 172
       width: 15
       height: 16
-    spriteID: 956fe96e90e8985439a8deeb6907e90f
+    spriteID: 0831fe90dd37e224cbb2df48e7470975
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1091,7 +1091,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 68, y: 172}
-  - name: starboi (3)_Frame_47
+  - name: Starboi_Frame_47
     originalName: 
     pivot: {x: 0.53333336, y: -0.5}
     alignment: 9
@@ -1102,7 +1102,7 @@ ScriptedImporter:
       y: 196
       width: 15
       height: 16
-    spriteID: 94daf6dcb414f5b47adcd8348caf6f7f
+    spriteID: b88781a9a4264f9489611360abd08021
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -1114,13 +1114,13 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1840730728
-    name: starboi (3)
+    guid: 318851192
+    name: Starboi
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: starboi (3)_Frame_0
+    - name: Starboi_Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -1128,8 +1128,8 @@ ScriptedImporter:
         y: 8
         width: 16
         height: 16
-      spriteId: 727753c7aa647c0458dea299cb815925
-    - name: starboi (3)_Frame_1
+      spriteId: 03589e26115a6a34a8540523944f4c79
+    - name: Starboi_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -1137,8 +1137,8 @@ ScriptedImporter:
         y: 8
         width: 16
         height: 13
-      spriteId: 58cfce6b060d98349aee12d3325f4d8b
-    - name: starboi (3)_Frame_2
+      spriteId: 8eaf3ab68ae3a8942b9809ff14d5507c
+    - name: Starboi_Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -1146,8 +1146,8 @@ ScriptedImporter:
         y: 8
         width: 16
         height: 16
-      spriteId: 0618f5f6136ba3d44bc2e1f3c8b0ae50
-    - name: starboi (3)_Frame_3
+      spriteId: b45c112b9f8c76b45be1bdf8ef6bed44
+    - name: Starboi_Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -1155,8 +1155,8 @@ ScriptedImporter:
         y: 8
         width: 16
         height: 13
-      spriteId: 810323a6fba3d994688b808bd25a973f
-    - name: starboi (3)_Frame_4
+      spriteId: 9c30bf1fb6cbf734eafcc5ad3717a3fc
+    - name: Starboi_Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -1164,8 +1164,8 @@ ScriptedImporter:
         y: 11
         width: 16
         height: 16
-      spriteId: ded8561aa88cd024c96875f2239bcbd6
-    - name: starboi (3)_Frame_5
+      spriteId: 15b77c6839a446946b1048d534a003b0
+    - name: Starboi_Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -1173,8 +1173,8 @@ ScriptedImporter:
         y: 8
         width: 16
         height: 16
-      spriteId: 9dc95f4d28996b747a8ab918a6aa5309
-    - name: starboi (3)_Frame_6
+      spriteId: 11490fa61c1eb1247a30e1121b3428ed
+    - name: Starboi_Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -1182,8 +1182,8 @@ ScriptedImporter:
         y: 8
         width: 16
         height: 13
-      spriteId: f585728347b86214db871ed6306cbd6f
-    - name: starboi (3)_Frame_7
+      spriteId: 76c457dc70256b04db61fd9e23735676
+    - name: Starboi_Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -1191,8 +1191,8 @@ ScriptedImporter:
         y: 11
         width: 16
         height: 16
-      spriteId: 29fa6668cc841704aab242afda7179b1
-    - name: starboi (3)_Frame_8
+      spriteId: a2f65415e2f8ee24ba76a64aff67d76c
+    - name: Starboi_Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
@@ -1200,8 +1200,8 @@ ScriptedImporter:
         y: 8
         width: 16
         height: 16
-      spriteId: b01c3b9a3f5952f4c93cece6ba0a100c
-    - name: starboi (3)_Frame_9
+      spriteId: 09075f8202c81a14d8adfdd8de12e719
+    - name: Starboi_Frame_9
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
@@ -1209,8 +1209,8 @@ ScriptedImporter:
         y: 8
         width: 16
         height: 13
-      spriteId: 43c211dc6c819d446aac17bd948f2618
-    - name: starboi (3)_Frame_10
+      spriteId: 58ef65511821cd744a868d98670eeaae
+    - name: Starboi_Frame_10
       frameIndex: 10
       additiveSortOrder: 0
       cellRect:
@@ -1218,8 +1218,8 @@ ScriptedImporter:
         y: 8
         width: 16
         height: 16
-      spriteId: e1655946c1825a94baef5476463295d2
-    - name: starboi (3)_Frame_11
+      spriteId: 21d42f84848e34440a2b60d0635861d6
+    - name: Starboi_Frame_11
       frameIndex: 11
       additiveSortOrder: 0
       cellRect:
@@ -1227,8 +1227,8 @@ ScriptedImporter:
         y: 11
         width: 16
         height: 16
-      spriteId: 82266017f1266ad4c81f786e123d7e5e
-    - name: starboi (3)_Frame_12
+      spriteId: 5c36fe93d74446242aad537ce2ee0b62
+    - name: Starboi_Frame_12
       frameIndex: 12
       additiveSortOrder: 0
       cellRect:
@@ -1236,8 +1236,8 @@ ScriptedImporter:
         y: 8
         width: 16
         height: 16
-      spriteId: 92b2f1834f5f79d4ca8e51b7932a57d3
-    - name: starboi (3)_Frame_13
+      spriteId: 0d1ff75ac46d1e149879cd21f96e494f
+    - name: Starboi_Frame_13
       frameIndex: 13
       additiveSortOrder: 0
       cellRect:
@@ -1245,8 +1245,8 @@ ScriptedImporter:
         y: 8
         width: 16
         height: 16
-      spriteId: 92ba941bec3388b40b1c544c6756f269
-    - name: starboi (3)_Frame_14
+      spriteId: faccbf17693cded42a8c9600d6a47d0d
+    - name: Starboi_Frame_14
       frameIndex: 14
       additiveSortOrder: 0
       cellRect:
@@ -1254,8 +1254,8 @@ ScriptedImporter:
         y: 8
         width: 29
         height: 20
-      spriteId: 1b968f6c2a34f5645a69d9fb1d49f567
-    - name: starboi (3)_Frame_15
+      spriteId: fb23e23eeece1ea4db48a3e0d97f8908
+    - name: Starboi_Frame_15
       frameIndex: 15
       additiveSortOrder: 0
       cellRect:
@@ -1263,8 +1263,8 @@ ScriptedImporter:
         y: 8
         width: 32
         height: 22
-      spriteId: c106af94db2537a448281598595d1e70
-    - name: starboi (3)_Frame_16
+      spriteId: c01399ce48b6bce4998bbdce08f74075
+    - name: Starboi_Frame_16
       frameIndex: 16
       additiveSortOrder: 0
       cellRect:
@@ -1272,8 +1272,8 @@ ScriptedImporter:
         y: 8
         width: 32
         height: 18
-      spriteId: 6ff7a25406a272f418f23a52388e4a0c
-    - name: starboi (3)_Frame_17
+      spriteId: 551066f2a87866c43a556a5bbfc4d87a
+    - name: Starboi_Frame_17
       frameIndex: 17
       additiveSortOrder: 0
       cellRect:
@@ -1281,8 +1281,8 @@ ScriptedImporter:
         y: 8
         width: 30
         height: 18
-      spriteId: d3ff5092e42f4b84196989bf00731e0c
-    - name: starboi (3)_Frame_18
+      spriteId: e5aa3fac710a07949976326d3a301b21
+    - name: Starboi_Frame_18
       frameIndex: 18
       additiveSortOrder: 0
       cellRect:
@@ -1290,8 +1290,8 @@ ScriptedImporter:
         y: 15
         width: 13
         height: 3
-      spriteId: e0f0799a945478d478f1d9edc8542b46
-    - name: starboi (3)_Frame_19
+      spriteId: 98c41d96fa281d145930d53856c226e8
+    - name: Starboi_Frame_19
       frameIndex: 19
       additiveSortOrder: 0
       cellRect:
@@ -1299,8 +1299,8 @@ ScriptedImporter:
         y: 15
         width: 3
         height: 3
-      spriteId: be6c37a1036eb274ea84e5d519ba1128
-    - name: starboi (3)_Frame_20
+      spriteId: 89c714a29a386794d82ffc87cc81e74c
+    - name: Starboi_Frame_20
       frameIndex: 20
       additiveSortOrder: 0
       cellRect:
@@ -1308,8 +1308,8 @@ ScriptedImporter:
         y: 13
         width: 7
         height: 7
-      spriteId: 10ce6bf616cd9a347910e559cdbc49de
-    - name: starboi (3)_Frame_21
+      spriteId: 8e4f43949cb90b543b5c719fbdfe99af
+    - name: Starboi_Frame_21
       frameIndex: 21
       additiveSortOrder: 0
       cellRect:
@@ -1317,8 +1317,8 @@ ScriptedImporter:
         y: 11
         width: 11
         height: 11
-      spriteId: 41aac4a52a5801546bf12ec081ef8378
-    - name: starboi (3)_Frame_22
+      spriteId: f563b2b4009bcd149a65df0130895543
+    - name: Starboi_Frame_22
       frameIndex: 22
       additiveSortOrder: 0
       cellRect:
@@ -1326,8 +1326,8 @@ ScriptedImporter:
         y: 8
         width: 16
         height: 13
-      spriteId: 4941cd993359ede43ba90d7f265c739f
-    - name: starboi (3)_Frame_23
+      spriteId: d60ec57d7844b8b4aa4db68ba9d43356
+    - name: Starboi_Frame_23
       frameIndex: 23
       additiveSortOrder: 0
       cellRect:
@@ -1335,8 +1335,8 @@ ScriptedImporter:
         y: 8
         width: 16
         height: 13
-      spriteId: 23eaa5ad4b9383942bc73197d4d90145
-    - name: starboi (3)_Frame_24
+      spriteId: 759ed0a99affe164ab4ef59dcdfc746e
+    - name: Starboi_Frame_24
       frameIndex: 24
       additiveSortOrder: 0
       cellRect:
@@ -1344,8 +1344,8 @@ ScriptedImporter:
         y: 11
         width: 11
         height: 11
-      spriteId: e0002de7106e980489e1184657d2bd32
-    - name: starboi (3)_Frame_25
+      spriteId: dd6f3fbfae43a5949ac8ac7d5b944579
+    - name: Starboi_Frame_25
       frameIndex: 25
       additiveSortOrder: 0
       cellRect:
@@ -1353,8 +1353,8 @@ ScriptedImporter:
         y: 13
         width: 7
         height: 7
-      spriteId: 1a9a1643c3c5dd546a494a5e65a5e94f
-    - name: starboi (3)_Frame_26
+      spriteId: 3ba38b786d3403f4ba8b6bcae4bef8ed
+    - name: Starboi_Frame_26
       frameIndex: 26
       additiveSortOrder: 0
       cellRect:
@@ -1362,8 +1362,8 @@ ScriptedImporter:
         y: 15
         width: 3
         height: 3
-      spriteId: 71a5ac71916f2f04886d9ef13f56ab73
-    - name: starboi (3)_Frame_28
+      spriteId: 8fbc216d57af6734b92de3aa648a837b
+    - name: Starboi_Frame_28
       frameIndex: 28
       additiveSortOrder: 0
       cellRect:
@@ -1371,8 +1371,8 @@ ScriptedImporter:
         y: 8
         width: 16
         height: 16
-      spriteId: 144fda5ca55b9ec41a0804e591e6d764
-    - name: starboi (3)_Frame_29
+      spriteId: 6f888c00c3b505542be1ef5889b1ab80
+    - name: Starboi_Frame_29
       frameIndex: 29
       additiveSortOrder: 0
       cellRect:
@@ -1380,8 +1380,8 @@ ScriptedImporter:
         y: 8
         width: 14
         height: 16
-      spriteId: 8aec656fef2f61b4a942e96f4a2a4cc9
-    - name: starboi (3)_Frame_30
+      spriteId: d252f6a07351a8b4a89a04fb509dc85a
+    - name: Starboi_Frame_30
       frameIndex: 30
       additiveSortOrder: 0
       cellRect:
@@ -1389,8 +1389,8 @@ ScriptedImporter:
         y: 8
         width: 16
         height: 16
-      spriteId: 8975e434c6748304b9e10d6a75b078f8
-    - name: starboi (3)_Frame_31
+      spriteId: 73db1dca5753df147afb8ef43c636dab
+    - name: Starboi_Frame_31
       frameIndex: 31
       additiveSortOrder: 0
       cellRect:
@@ -1398,8 +1398,8 @@ ScriptedImporter:
         y: 8
         width: 16
         height: 16
-      spriteId: a99a1b23781a5b8429f1c94d86fdcab0
-    - name: starboi (3)_Frame_32
+      spriteId: be91bdbead2f82148868d8d8e60cc688
+    - name: Starboi_Frame_32
       frameIndex: 32
       additiveSortOrder: 0
       cellRect:
@@ -1407,8 +1407,8 @@ ScriptedImporter:
         y: 8
         width: 14
         height: 16
-      spriteId: e5b643c15ae2803478860ddeab9023d6
-    - name: starboi (3)_Frame_33
+      spriteId: 77accc647aa4f0f4592ebbcb9b855ca7
+    - name: Starboi_Frame_33
       frameIndex: 33
       additiveSortOrder: 0
       cellRect:
@@ -1416,8 +1416,8 @@ ScriptedImporter:
         y: 8
         width: 16
         height: 16
-      spriteId: 14ac20392d9ad974fbe2a1088e217e49
-    - name: starboi (3)_Frame_34
+      spriteId: c66a4a04e4d13c047babc672a8cfb956
+    - name: Starboi_Frame_34
       frameIndex: 34
       additiveSortOrder: 0
       cellRect:
@@ -1425,8 +1425,8 @@ ScriptedImporter:
         y: 8
         width: 16
         height: 16
-      spriteId: 9ad430a7bf9596d48af773cefaa9de11
-    - name: starboi (3)_Frame_35
+      spriteId: 7dc39a391da395d45a6ab6a403037ffe
+    - name: Starboi_Frame_35
       frameIndex: 35
       additiveSortOrder: 0
       cellRect:
@@ -1434,8 +1434,8 @@ ScriptedImporter:
         y: 8
         width: 16
         height: 16
-      spriteId: 56283638f3ecb1346ade7b78afe0661b
-    - name: starboi (3)_Frame_36
+      spriteId: 1f7bd0c780b62af4a8b5bc1c15cce535
+    - name: Starboi_Frame_36
       frameIndex: 36
       additiveSortOrder: 0
       cellRect:
@@ -1443,8 +1443,8 @@ ScriptedImporter:
         y: 8
         width: 16
         height: 16
-      spriteId: c5a44ec1db98df64f85cd439684918ba
-    - name: starboi (3)_Frame_37
+      spriteId: d7a3714c965965f44a7a4b89c7fed1ab
+    - name: Starboi_Frame_37
       frameIndex: 37
       additiveSortOrder: 0
       cellRect:
@@ -1452,8 +1452,8 @@ ScriptedImporter:
         y: 8
         width: 16
         height: 16
-      spriteId: 71ba2230a4b22824d839c839a0a83e63
-    - name: starboi (3)_Frame_38
+      spriteId: c93fab80af776b14d88a47019840f59c
+    - name: Starboi_Frame_38
       frameIndex: 38
       additiveSortOrder: 0
       cellRect:
@@ -1461,8 +1461,8 @@ ScriptedImporter:
         y: 8
         width: 16
         height: 16
-      spriteId: 8f50f94bc06827a409d2bfe034479ad8
-    - name: starboi (3)_Frame_39
+      spriteId: 87aa94f3fa4f474479f1fbc6301ae9cf
+    - name: Starboi_Frame_39
       frameIndex: 39
       additiveSortOrder: 0
       cellRect:
@@ -1470,8 +1470,8 @@ ScriptedImporter:
         y: 8
         width: 16
         height: 16
-      spriteId: fa3f01ad884b6b349aebaae653293ce0
-    - name: starboi (3)_Frame_40
+      spriteId: 1523ba1f282cf1a49a8dc36c58726a1d
+    - name: Starboi_Frame_40
       frameIndex: 40
       additiveSortOrder: 0
       cellRect:
@@ -1479,8 +1479,8 @@ ScriptedImporter:
         y: 8
         width: 15
         height: 16
-      spriteId: 95d23a1d7cc2cca4eb3c976055b26d0e
-    - name: starboi (3)_Frame_41
+      spriteId: 895320c14eecba74583bb1a338c44994
+    - name: Starboi_Frame_41
       frameIndex: 41
       additiveSortOrder: 0
       cellRect:
@@ -1488,8 +1488,8 @@ ScriptedImporter:
         y: 8
         width: 14
         height: 16
-      spriteId: fe25189daff979a49b459aca7cd3732e
-    - name: starboi (3)_Frame_42
+      spriteId: 1ee58c5b95abc48449937b45742fc05a
+    - name: Starboi_Frame_42
       frameIndex: 42
       additiveSortOrder: 0
       cellRect:
@@ -1497,8 +1497,8 @@ ScriptedImporter:
         y: 8
         width: 15
         height: 16
-      spriteId: 12a6ed336da30134da5cc71509875eac
-    - name: starboi (3)_Frame_43
+      spriteId: f09ac6c6859f389429a335b4f48fc047
+    - name: Starboi_Frame_43
       frameIndex: 43
       additiveSortOrder: 0
       cellRect:
@@ -1506,8 +1506,8 @@ ScriptedImporter:
         y: 8
         width: 14
         height: 16
-      spriteId: e00635d78bc023149a183b937d8b27f4
-    - name: starboi (3)_Frame_44
+      spriteId: 611a7c1ed31b05f4bb1507243d54e42f
+    - name: Starboi_Frame_44
       frameIndex: 44
       additiveSortOrder: 0
       cellRect:
@@ -1515,8 +1515,8 @@ ScriptedImporter:
         y: 8
         width: 15
         height: 16
-      spriteId: 70fb913b369eae240bf1d1c27c45d528
-    - name: starboi (3)_Frame_45
+      spriteId: 76af49e950518124bae1de204533e3c5
+    - name: Starboi_Frame_45
       frameIndex: 45
       additiveSortOrder: 0
       cellRect:
@@ -1524,8 +1524,8 @@ ScriptedImporter:
         y: 8
         width: 14
         height: 16
-      spriteId: 18a8b94d4262310488b48f4ac1b7a1dd
-    - name: starboi (3)_Frame_46
+      spriteId: 57942759647892844894a053cba246c9
+    - name: Starboi_Frame_46
       frameIndex: 46
       additiveSortOrder: 0
       cellRect:
@@ -1533,8 +1533,8 @@ ScriptedImporter:
         y: 8
         width: 15
         height: 16
-      spriteId: 956fe96e90e8985439a8deeb6907e90f
-    - name: starboi (3)_Frame_47
+      spriteId: 0831fe90dd37e224cbb2df48e7470975
+    - name: Starboi_Frame_47
       frameIndex: 47
       additiveSortOrder: 0
       cellRect:
@@ -1542,7 +1542,7 @@ ScriptedImporter:
         y: 8
         width: 15
         height: 16
-      spriteId: 94daf6dcb414f5b47adcd8348caf6f7f
+      spriteId: b88781a9a4264f9489611360abd08021
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -1571,6 +1571,8 @@ ScriptedImporter:
     allowsAlphaSplitting: 0
     androidETC2FallbackOverride: 0
   generatePhysicsShape: 0
-  secondarySpriteTextures: []
+  secondarySpriteTextures:
+  - name: _emmsion
+    texture: {fileID: -8328923581568760697, guid: 50142e1e7233cf249903a3da9e0015f9, type: 3}
   spritePackingTag: 
   canvasSize: {x: 64, y: 32}

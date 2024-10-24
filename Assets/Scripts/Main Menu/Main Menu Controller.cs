@@ -1,11 +1,11 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Main_Menu
+namespace StarAdventure.Main_Menu
 {
     public class MainMenuController : MonoBehaviour
     {
-        [SerializeField] private GameObject _leaderboard;
+        [SerializeField] private GameObject leaderboard;
         public void Play()
         {
             SceneManager.LoadScene(1);
@@ -18,7 +18,7 @@ namespace Main_Menu
 
         public void OpenLeaderboard()
         {
-            _leaderboard.SetActive(true);
+            leaderboard.SetActive(true);
         }
     }
 }

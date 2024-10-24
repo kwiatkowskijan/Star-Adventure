@@ -1,4 +1,7 @@
-public interface IGameEndListener
+namespace StarAdventure.Interface
 {
-    void OnGameEnd();
+    public interface IGameEndListener
+    {
+        void OnGameEnd();
+    }
 }

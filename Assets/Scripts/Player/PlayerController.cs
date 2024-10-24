@@ -1,63 +1,66 @@
-using System.Collections;
-using System.Collections.Generic;
+using StarAdventure.Interface;
 using UnityEngine;
+using StarAdventure.Managers;
 
-public class PlayerController : MonoBehaviour, IGameEndListener
+namespace StarAdventure.Player
 {
-    private Rigidbody2D _rb;
-    [SerializeField] private float _speed;
-    private float _verticalSpeed;
-    private Animator _animator;
-    private AudioSource _audioSource;
-    [SerializeField] private AudioClip _deathClip;
-
-    private void Awake()
+    public class PlayerController : MonoBehaviour, IGameEndListener
     {
-        _rb = GetComponent<Rigidbody2D>();
-        _animator = GetComponentInChildren<Animator>();
-        _audioSource = GetComponent<AudioSource>();
-        GameManager.Instance.RegisterListener(this);
-    }
+        private Rigidbody2D _rb;
+        [SerializeField] private float speed;
+        private float _verticalSpeed;
+        private Animator _animator;
+        private AudioSource _audioSource;
+        [SerializeField] private AudioClip deathClip;
 
-    private void Update()
-    {
-        MovePlayer();
-    }
-
-    private void MovePlayer()
-    {
-        _verticalSpeed = Input.GetAxis("Vertical") * _speed;
-        _rb.velocity = new Vector2(0, _verticalSpeed);
-
-        if(_rb.velocity.magnitude > 0 || _rb.velocity.magnitude < 0 )
+        private void Awake()
         {
-            _animator.SetBool("IsMoving", true);
+            _rb = GetComponent<Rigidbody2D>();
+            _animator = GetComponentInChildren<Animator>();
+            _audioSource = GetComponent<AudioSource>();
+            GameManager.Instance.RegisterListener(this);
         }
-        else
+
+        private void Update()
         {
-            _animator.SetBool("IsMoving", false);
+            MovePlayer();
         }
-    }
 
-    private void DeathAnimation()
-    {
-        _animator.SetTrigger("Death");
-    }
+        private void MovePlayer()
+        {
+            _verticalSpeed = Input.GetAxis("Vertical") * speed;
+            _rb.velocity = new Vector2(0, _verticalSpeed);
 
-    private void AssignClip(AudioClip clip)
-    {
-        _audioSource.clip = clip;
-    }
+            if(_rb.velocity.magnitude > 0 || _rb.velocity.magnitude < 0 )
+            {
+                _animator.SetBool("IsMoving", true);
+            }
+            else
+            {
+                _animator.SetBool("IsMoving", false);
+            }
+        }
 
-    private void PlayAudio()
-    {
-        _audioSource.Play();
-    }
+        private void DeathAnimation()
+        {
+            _animator.SetTrigger("Death");
+        }
 
-    public void OnGameEnd()
-    {
-        AssignClip(_deathClip);
-        PlayAudio();
-        DeathAnimation();
+        private void AssignClip(AudioClip clip)
+        {
+            _audioSource.clip = clip;
+        }
+
+        private void PlayAudio()
+        {
+            _audioSource.Play();
+        }
+
+        public void OnGameEnd()
+        {
+            AssignClip(deathClip);
+            PlayAudio();
+            DeathAnimation();
+        }
     }
 }

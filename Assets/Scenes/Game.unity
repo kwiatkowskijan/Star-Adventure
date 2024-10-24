@@ -679,6 +679,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 185403632}
   m_CullTransparentMesh: 1
+--- !u!1 &237815448
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 237815449}
+  - component: {fileID: 237815450}
+  m_Layer: 0
+  m_Name: Cloud Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &237815449
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 237815448}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 346624771}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &237815450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 237815448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec0db6987489e74eaad40a81bf684b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cloudPrefabs:
+  - {fileID: 8307036567451267571, guid: 962ee92eece2145429c97584d811c540, type: 3}
+  cloudSpeed: 5
+  baseSpawnInterval: 5
+  spawnIntervalMin: 0.5
+  spawnIntervalScaleFactor: 0.001
+  spawnMaxY: 5
+  spawnMinY: -2
 --- !u!1 &334140301
 GameObject:
   m_ObjectHideFlags: 0
@@ -777,6 +829,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 885098254}
+  - {fileID: 237815449}
   - {fileID: 1772826350}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2014,7 +2067,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2b665b5ac1b3fc4586953d49787026a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _names:
+  names:
   - {fileID: 2095207903}
   - {fileID: 1600352166}
   - {fileID: 1079118633}
@@ -2025,17 +2078,17 @@ MonoBehaviour:
   - {fileID: 1071077915}
   - {fileID: 165941757}
   - {fileID: 1423772792}
-  _distances:
-  - {fileID: 2017052563}
-  - {fileID: 129715191}
-  - {fileID: 936639073}
-  - {fileID: 79692068}
-  - {fileID: 1215750500}
-  - {fileID: 417667009}
-  - {fileID: 1518156720}
-  - {fileID: 1873050591}
-  - {fileID: 1957990137}
-  - {fileID: 2113398181}
+  distances:
+  - {fileID: 1393098846}
+  - {fileID: 1841077974}
+  - {fileID: 937320858}
+  - {fileID: 441325956}
+  - {fileID: 1334718649}
+  - {fileID: 1161027944}
+  - {fileID: 1649016455}
+  - {fileID: 553561443}
+  - {fileID: 856110603}
+  - {fileID: 1353641574}
 --- !u!1 &641436255
 GameObject:
   m_ObjectHideFlags: 0
@@ -2083,8 +2136,8 @@ GameObject:
   - component: {fileID: 716155591}
   - component: {fileID: 716155590}
   - component: {fileID: 716155595}
-  - component: {fileID: 716155596}
   - component: {fileID: 716155597}
+  - component: {fileID: 716155596}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -2104,10 +2157,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3d11d22b8277c24d88cd87a93f6e985, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bulletPrefab: {fileID: 3125566220050524086, guid: 8ac3f324bdf210a4faafa9589aca9111, type: 3}
-  _mousePosition: {x: 0, y: 0, z: 0}
-  _cooldown: 0.2
-  _shootingSFX: {fileID: 8300000, guid: 7cc523979fce1ca43aefc1a20465bc4b, type: 3}
+  bulletPrefab: {fileID: 3125566220050524086, guid: 8ac3f324bdf210a4faafa9589aca9111, type: 3}
+  mousePosition: {x: 0, y: 0, z: 0}
+  cooldown: 0.2
+  shootingSfx: {fileID: 8300000, guid: 7cc523979fce1ca43aefc1a20465bc4b, type: 3}
 --- !u!114 &716155591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2120,8 +2173,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50fbc36a43f4def40b9aa527edbcfc2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 8
-  _deathClip: {fileID: 8300000, guid: 6026dce1ee812a649affd5f6000e6b59, type: 3}
+  speed: 8
+  deathClip: {fileID: 8300000, guid: 6026dce1ee812a649affd5f6000e6b59, type: 3}
 --- !u!50 &716155592
 Rigidbody2D:
   serializedVersion: 4
@@ -2325,7 +2378,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 0.90502363, b: 0, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.75
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 8d37081a000000009765f4bb6f14f0f3
@@ -2337,7 +2390,7 @@ MonoBehaviour:
   m_NormalMapDistance: 3
   m_NormalMapQuality: 2
   m_UseNormalMap: 0
-  m_ShadowIntensityEnabled: 0
+  m_ShadowIntensityEnabled: 1
   m_ShadowIntensity: 0.75
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
@@ -2347,7 +2400,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 2
+  m_PointLightOuterRadius: 1.5
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -2741,16 +2794,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 236fe7b761a51df4380c1b8861c6db3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _asteroidPrefabs:
+  asteroidPrefabs:
   - {fileID: 3451301594590103630, guid: ae0bb2ff4eede694585d13ff20339dca, type: 3}
-  _player: {fileID: 716155589}
-  _baseAsteroidSpeed: 4
-  _baseSpawnInterval: 4
-  _spawnIntervalMin: 0.5
-  _speedScaleFactor: 0.001
-  _spawnIntervalScaleFactor: 0.001
-  _spawnMaxY: 5
-  _spawnMinY: -5
+  player: {fileID: 716155589}
+  baseAsteroidSpeed: 5
+  baseSpawnInterval: 5
+  spawnIntervalMin: 1
+  speedScaleFactor: 0.01
+  spawnIntervalScaleFactor: 0.001
+  spawnMaxY: 5
+  spawnMinY: -5
 --- !u!1 &936639071
 GameObject:
   m_ObjectHideFlags: 0
@@ -5158,7 +5211,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: a86ef1644093ddd46a8c1da0f14b0cd7, type: 3}
       propertyPath: m_SortingLayer
-      value: 2
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: a86ef1644093ddd46a8c1da0f14b0cd7, type: 3}
       propertyPath: m_SortingLayerID
@@ -5631,7 +5684,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a254cbba0b656d47a8e7f20ad230035, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: {fileID: 1503886027}
+  name: {fileID: 1503886027}
   submitScoreEvent:
     m_PersistentCalls:
       m_Calls:
@@ -6093,11 +6146,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 584197123f68a0348bb7d0d1f535a76e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _treePrefab: {fileID: 2822313670965812500, guid: 0b108a216eee3c4408e7519d5fc2cecb, type: 3}
-  _treeSpeed: 10
-  _baseSpawnInterval: 5
-  _spawnIntervalMin: 0.5
-  _spawnIntervalScaleFactor: 0.001
+  treePrefabs:
+  - {fileID: 4905557398804842524, guid: 2a5ac33c955709147867a16fe01d3d9b, type: 3}
+  - {fileID: 4036070221343411726, guid: c8df338c8e723954fbce0713a7b6bc47, type: 3}
+  treeSpeed: 5
+  baseSpawnInterval: 5
+  spawnIntervalMin: 0.5
+  spawnIntervalScaleFactor: 0.001
 --- !u!1 &1776032530
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,43 +1,46 @@
-using System.Collections;
-using System.Collections.Generic;
+using StarAdventure.Interface;
+using StarAdventure.Managers;
 using TMPro;
 using UnityEngine;
 
-public class UiManager : MonoBehaviour, IGameEndListener
+namespace StarAdventure
 {
-    [SerializeField] private TMP_Text _points;
-    [SerializeField] private TMP_Text _distanceTravelled;
-    [SerializeField] private GameObject _endGameScreen;
-
-    private void Start()
+    public class UiManager : MonoBehaviour, IGameEndListener
     {
-        GameManager.Instance.RegisterListener(this);
-    }
+        [SerializeField] private TMP_Text _points;
+        [SerializeField] private TMP_Text _distanceTravelled;
+        [SerializeField] private GameObject _endGameScreen;
 
-    private void Update()
-    {
-        UpdatePoints();
-        UpdateDistanceTravlled();
-    }
+        private void Start()
+        {
+            GameManager.Instance.RegisterListener(this);
+        }
 
-    private void UpdatePoints()
-    {
-        _points.SetText(GameManager.Instance.Points.ToString());
-    }
+        private void Update()
+        {
+            UpdatePoints();
+            UpdateDistanceTravlled();
+        }
 
-    private void UpdateDistanceTravlled()
-    {
-        _distanceTravelled.SetText(GameManager.Instance.DistanceTravelled.ToString("0") + " m");
-    }
+        private void UpdatePoints()
+        {
+            _points.SetText(GameManager.Instance.Points.ToString());
+        }
 
-    private void EndGameScreen()
-    {
-        _endGameScreen.SetActive(true);
-    }
+        private void UpdateDistanceTravlled()
+        {
+            _distanceTravelled.SetText(GameManager.Instance.DistanceTravelled.ToString("0") + " m");
+        }
 
-    public void OnGameEnd()
-    {
-        Invoke("EndGameScreen", 2f);
-    }
+        private void EndGameScreen()
+        {
+            _endGameScreen.SetActive(true);
+        }
 
+        public void OnGameEnd()
+        {
+            Invoke("EndGameScreen", 2f);
+        }
+
+    }
 }

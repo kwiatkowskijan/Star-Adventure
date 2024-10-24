@@ -5684,7 +5684,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a254cbba0b656d47a8e7f20ad230035, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: {fileID: 0}
+  name: {fileID: 1503886027}
   submitScoreEvent:
     m_PersistentCalls:
       m_Calls:

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Pool;
 
@@ -26,6 +24,11 @@ public class Asteroid : MonoBehaviour
     private void Start()
     {
         GetLastPlayerPosition();
+    }
+
+    private void OnEnable()
+    {
+        _dead = false;
     }
 
     private void Update()

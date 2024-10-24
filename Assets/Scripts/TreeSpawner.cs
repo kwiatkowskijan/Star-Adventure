@@ -1,10 +1,11 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class TreeSpawner : MonoBehaviour, IGameEndListener
 {
-    [SerializeField] private GameObject _treePrefab;
+    [SerializeField] private List<GameObject> treePrefabs = new List<GameObject>();
     [SerializeField] private float _treeSpeed;
 
     [SerializeField] private float _baseSpawnInterval;
@@ -42,7 +43,8 @@ public class TreeSpawner : MonoBehaviour, IGameEndListener
 
     private void SpawnTree()
     {
-        var tree = Instantiate(_treePrefab, this.transform.position, Quaternion.identity);
+        var i = Random.Range(0, treePrefabs.Count);
+        var tree = Instantiate(treePrefabs[i], this.transform.position, Quaternion.identity);
         Tree treeComponent = tree.GetComponent<Tree>();
         treeComponent.treeSpeed = _treeSpeed;
     }

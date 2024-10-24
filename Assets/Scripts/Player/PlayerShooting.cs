@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerShooting : MonoBehaviour
+public class PlayerShooting : MonoBehaviour, IGameEndListener
 {
     private BulletSpawner _bulletSpawner;
 
@@ -12,12 +12,19 @@ public class PlayerShooting : MonoBehaviour
     private float _cooldownTime;
     [SerializeField] private AudioClip _shootingSFX;
     private AudioSource _audioSource;
+    private bool _canShoot = true;
 
     private void Awake()
     {
         _bulletSpawner = GetComponent<BulletSpawner>();
         _audioSource = GetComponent<AudioSource>();
     }
+
+    private void Start()
+    {
+        GameManager.Instance.RegisterListener(this);
+    }
+
     void Update()
     {
         GetInput();
@@ -26,7 +33,7 @@ public class PlayerShooting : MonoBehaviour
 
     private void GetInput()
     {
-        if (Input.GetMouseButtonDown(0) && GetCooldown() >= _cooldown)
+        if (Input.GetMouseButtonDown(0) && GetCooldown() >= _cooldown && _canShoot)
         {
             _cooldownTime = 0;
             AssignClip(_shootingSFX);
@@ -37,7 +44,6 @@ public class PlayerShooting : MonoBehaviour
 
     private void Shoot()
     {
-        //spawn bullet
         _bulletSpawner.pool.Get();
     }
 
@@ -55,5 +61,10 @@ public class PlayerShooting : MonoBehaviour
     private void PlayAudio()
     {
         _audioSource.Play();
+    }
+
+    public void OnGameEnd()
+    {
+        _canShoot = false;
     }
 }

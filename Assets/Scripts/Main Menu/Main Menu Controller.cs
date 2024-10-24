@@ -1,23 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenuController : MonoBehaviour
+namespace Main_Menu
 {
-    [SerializeField] private GameObject _leaderboard;
-    public void Play()
+    public class MainMenuController : MonoBehaviour
     {
-        SceneManager.LoadScene(1);
-    }
+        [SerializeField] private GameObject _leaderboard;
+        public void Play()
+        {
+            SceneManager.LoadScene(1);
+        }
 
-    public void OpenSetting()
-    {
+        public void OpenSetting()
+        {
 
-    }
+        }
 
-    public void OpenLeaderboard()
-    {
-        _leaderboard.SetActive(true);
+        public void OpenLeaderboard()
+        {
+            _leaderboard.SetActive(true);
+        }
     }
 }

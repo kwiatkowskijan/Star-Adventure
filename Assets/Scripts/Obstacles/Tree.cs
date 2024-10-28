@@ -7,7 +7,7 @@ namespace StarAdventure.Obstacles
     public class Tree : MonoBehaviour, IGameEndListener
     {
         [HideInInspector] public float treeSpeed;
-        private int _damage = 1;
+        private const int _damage = 1;
         private bool _isGameEnded = false;
         void Start()
         {

@@ -53,6 +53,8 @@ namespace StarAdventure.Spawners
             cloud.transform.position = this.transform.position;
             cloud.transform.rotation = Quaternion.identity;
             cloud.gameObject.SetActive(true);
+            
+            MoveCloud(cloud);
         }
 
         private void OnReturnAsteroidToPool(Cloud cloud)
@@ -75,7 +77,18 @@ namespace StarAdventure.Spawners
 
             if (_timeSinceLastSpawn >= _currentSpawnInterval && !_isGameEnded)
             {
+                _pool.Get();
                 _timeSinceLastSpawn = 0f;
+            }
+        }
+
+        private void MoveCloud(Cloud cloud)
+        {
+            var cloudScript = cloud.GetComponent<Cloud>();
+
+            if (cloudScript != null)
+            {
+                cloudScript.Initialize(cloudSpeed);
             }
         }
 

@@ -8,7 +8,6 @@ namespace StarAdventure.Managers
     {
         private float _distance;
         [SerializeField] private TMP_InputField name;
-
         public UnityEvent<string, int> submitScoreEvent;
 
         public void SubmitScore()

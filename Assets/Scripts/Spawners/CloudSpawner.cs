@@ -39,9 +39,7 @@ namespace StarAdventure.Spawners
 
         private Cloud CreateCloud()
         {
-            int i = Random.Range(0, cloudPrefabs.Count);
-            Vector2 randomPosition = new Vector2(this.transform.position.x, Random.Range(spawnMinY, spawnMaxY));
-            Cloud cloud = Instantiate(cloudPrefabs[i], randomPosition, this.transform.rotation);
+            Cloud cloud = Instantiate(cloudPrefabs[RandomCloudPrefab()], RandomSpawnPosition(), this.transform.rotation);
 
             cloud.SetPool(_pool);
 
@@ -50,9 +48,11 @@ namespace StarAdventure.Spawners
 
         private void OnTakeCloudFormPool(Cloud cloud)
         {
-            cloud.transform.position = this.transform.position;
+            cloud.transform.position = RandomSpawnPosition();
             cloud.transform.rotation = Quaternion.identity;
             cloud.gameObject.SetActive(true);
+            
+            MoveCloud(cloud);
         }
 
         private void OnReturnAsteroidToPool(Cloud cloud)
@@ -63,6 +63,17 @@ namespace StarAdventure.Spawners
         private void OnDestroyAsteroid(Cloud cloud)
         {
             Destroy(cloud);
+        }
+        
+        private Vector2 RandomSpawnPosition()
+        {
+            Vector2 randomPosition = new Vector2(this.transform.position.x, Random.Range(spawnMinY, spawnMaxY));
+            return randomPosition;
+        }
+
+        private int RandomCloudPrefab()
+        {
+            return Random.Range(0, cloudPrefabs.Count);
         }
 
         private void ScaleCloudSpawnInterval()
@@ -75,7 +86,18 @@ namespace StarAdventure.Spawners
 
             if (_timeSinceLastSpawn >= _currentSpawnInterval && !_isGameEnded)
             {
+                _pool.Get();
                 _timeSinceLastSpawn = 0f;
+            }
+        }
+
+        private void MoveCloud(Cloud cloud)
+        {
+            var cloudScript = cloud.GetComponent<Cloud>();
+
+            if (cloudScript != null)
+            {
+                cloudScript.Initialize(cloudSpeed);
             }
         }
 

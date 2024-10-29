@@ -37,6 +37,7 @@ namespace StarAdventure.Obstacles
         private void OnEnable()
         {
             _dead = false;
+            GetLastPlayerPosition();
         }
 
         private void Update()
@@ -67,10 +68,10 @@ namespace StarAdventure.Obstacles
             _asteroidSpeed = speed;
         }
 
-
         private Vector2 GetLastPlayerPosition()
         {
             _lastPlayerPosition = _player.transform.position;
+            Debug.Log(_lastPlayerPosition);
             return _lastPlayerPosition;
         }
 

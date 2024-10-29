@@ -43,8 +43,9 @@ namespace StarAdventure.Spawners
 
         private Asteroid CreateAsteroid()
         {
-            Asteroid asteroid = Instantiate(asteroidPrefabs[RandomAsteroidPrefab()], RandomSpawnPosition(), this.transform.rotation);
-
+            Asteroid asteroid = Instantiate(asteroidPrefabs[RandomAsteroidPrefab()], RandomSpawnPosition(),
+                this.transform.rotation);
+            ShootAsteroid(asteroid);
             asteroid.SetPool(_pool);
 
             return asteroid;

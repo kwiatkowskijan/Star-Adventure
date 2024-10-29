@@ -43,9 +43,7 @@ namespace StarAdventure.Spawners
 
         private Asteroid CreateAsteroid()
         {
-            int randomIndex = Random.Range(0, asteroidPrefabs.Count);
-            Vector2 randomPosition = new Vector2(this.transform.position.x, Random.Range(spawnMinY, spawnMaxY));
-            Asteroid asteroid = Instantiate(asteroidPrefabs[randomIndex], randomPosition, this.transform.rotation);
+            Asteroid asteroid = Instantiate(asteroidPrefabs[RandomAsteroidPrefab()], RandomSpawnPosition(), this.transform.rotation);
 
             asteroid.SetPool(_pool);
 
@@ -54,7 +52,7 @@ namespace StarAdventure.Spawners
 
         private void OnTakeAsteroidFromPool(Asteroid asteroid)
         {
-            asteroid.transform.position = this.transform.position;
+            asteroid.transform.position = RandomSpawnPosition();
             asteroid.transform.rotation = Quaternion.identity;
 
             asteroid.gameObject.SetActive(true);
@@ -71,6 +69,17 @@ namespace StarAdventure.Spawners
         private void OnDestroyAsteroid(Asteroid asteroid)
         {
             Destroy(asteroid);
+        }
+
+        private Vector2 RandomSpawnPosition()
+        {
+            Vector2 randomPosition = new Vector2(this.transform.position.x, Random.Range(spawnMinY, spawnMaxY));
+            return randomPosition;
+        }
+
+        private int RandomAsteroidPrefab()
+        {
+            return Random.Range(0, asteroidPrefabs.Count);
         }
 
         private void ScaleAsteroidInterval()

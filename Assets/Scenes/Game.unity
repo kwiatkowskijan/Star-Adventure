@@ -799,6 +799,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cloudPrefabs:
   - {fileID: 8307036567451267571, guid: 962ee92eece2145429c97584d811c540, type: 3}
+  - {fileID: 8307036567451267571, guid: 3dd6f9c38a16be246ba5d066d9ab60e1, type: 3}
   cloudSpeed: 5
   baseSpawnInterval: 5
   spawnIntervalMin: 0.5

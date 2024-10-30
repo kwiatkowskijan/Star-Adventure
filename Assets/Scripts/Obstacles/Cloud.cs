@@ -51,7 +51,7 @@ namespace StarAdventure.Obstacles
         }
         private void OnBecameInvisible()
         {
-            Destroy(this.gameObject);
+            cloudPool.Release(this);
         }
 
         public void OnGameEnd()

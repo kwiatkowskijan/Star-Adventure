@@ -1,116 +1,97 @@
 using System.Collections.Generic;
-using StarAdventure.Interface;
-using StarAdventure.Managers;
-using StarAdventure.Obstacles;
 using UnityEngine;
 using UnityEngine.Pool;
+using StarAdventure.Managers;
 
 namespace StarAdventure.Spawners
 {
-    public class Spawner : MonoBehaviour, IGameEndListener
+    public abstract class Spawner<T> : MonoBehaviour where T : MonoBehaviour
     {
-        private ObjectPool<Asteroid> _pool;
+        protected ObjectPool<T> pool;
+        protected bool isGameEnded;
+        
+        [SerializeField] protected List<T> spawnedObjects = new List<T>();
+        [SerializeField] protected float baseObjectSpeed;
+        [SerializeField] protected float baseSpawnInterval;
+        [SerializeField] protected float minSpawnInterval;
+        [SerializeField] protected float speedScaleFactor;
+        [SerializeField] protected float spawnIntervalFactor;
+        [SerializeField] protected float maxSpawnY;
+        [SerializeField] protected float minSpawnY;
+        
+        protected float currentObjectSpeed;
+        protected float currentSpawnInterval;
+        protected float timeSinceLastSpawn;
 
-        [SerializeField] private List<Asteroid> asteroidPrefabs = new List<Asteroid>();
-        [SerializeField] private GameObject player;
-        [SerializeField] private float baseAsteroidSpeed;
-        [SerializeField] private float baseSpawnInterval;
-        [SerializeField] private float spawnIntervalMin;
-        [SerializeField] private float speedScaleFactor = 0.01f;
-        [SerializeField] private float spawnIntervalScaleFactor = 0.001f;
-        [SerializeField] private int spawnMaxY;
-        [SerializeField] private int spawnMinY;
-        private bool _isGameEnded;
-
-        private float _currentAsteroidSpeed;
-        private float _currentSpawnInterval;
-        private float _timeSinceLastSpawn;
-
-        private void Start()
+        protected virtual void Start()
         {
-            _currentAsteroidSpeed = baseAsteroidSpeed;
-            _currentSpawnInterval = baseSpawnInterval;
-            GameManager.Instance.RegisterListener(this);
-            _pool = new ObjectPool<Asteroid>(CreateAsteroid, OnTakeAsteroidFromPool, OnReturnAsteroidToPool,
-                OnDestroyAsteroid, true, 50, 100);
-            _isGameEnded = false;
+            currentObjectSpeed = baseObjectSpeed;
+            currentSpawnInterval = baseSpawnInterval;
+            pool = new ObjectPool<T>(CreateObject, OnTakeFromPool, OnReturnToPool, OnDestroyObject, true, 10, 20);
         }
 
-        private void Update()
+        protected virtual void Update()
         {
-            ScaleAsteroidInterval();
+            ScaleSpawnInterval();
         }
 
-        private Asteroid CreateAsteroid()
+        protected virtual T CreateObject()
         {
-            Asteroid asteroid = Instantiate(asteroidPrefabs[RandomAsteroidPrefab()], RandomSpawnPosition(),
+            T obj = Instantiate(spawnedObjects[RandomObject()], RandomSpawnPosition(),
                 this.transform.rotation);
-            ShootAsteroid(asteroid);
-            asteroid.SetPool(_pool);
-
-            return asteroid;
+            //ShootAsteroid(asteroid);
+            SetPool(obj);
+            return obj;    
         }
 
-        private void OnTakeAsteroidFromPool(Asteroid asteroid)
+        protected virtual void OnTakeFromPool(T obj)
         {
-            asteroid.transform.position = RandomSpawnPosition();
-            asteroid.transform.rotation = Quaternion.identity;
-
-            asteroid.gameObject.SetActive(true);
-            asteroid.circleCollider.enabled = true;
-
-            ShootAsteroid(asteroid);
+            obj.transform.position = RandomSpawnPosition();
+            obj.transform.rotation = Quaternion.identity;
+            obj.gameObject.SetActive(true);
         }
 
-        private void OnReturnAsteroidToPool(Asteroid asteroid)
+        protected virtual void OnReturnToPool(T obj)
         {
-            asteroid.gameObject.SetActive(false);
+            obj.gameObject.SetActive(false);
         }
 
-        private void OnDestroyAsteroid(Asteroid asteroid)
+        protected virtual void OnDestroyObject(T obj)
         {
-            Destroy(asteroid);
+            Destroy(obj);
+        }
+
+        private int RandomObject()
+        {
+            return Random.Range(0, spawnedObjects.Count);
         }
 
         private Vector2 RandomSpawnPosition()
         {
-            Vector2 randomPosition = new Vector2(this.transform.position.x, Random.Range(spawnMinY, spawnMaxY));
+            Vector2 randomPosition = new Vector2(this.transform.position.x, Random.Range(minSpawnY, maxSpawnY));
             return randomPosition;
         }
 
-        private int RandomAsteroidPrefab()
-        {
-            return Random.Range(0, asteroidPrefabs.Count);
-        }
-
-        private void ScaleAsteroidInterval()
+        protected virtual void ScaleSpawnInterval()
         {
             float distanceTravelled = GameManager.Instance.DistanceTravelled;
-            _currentAsteroidSpeed = baseAsteroidSpeed + (distanceTravelled * speedScaleFactor);
-            _currentSpawnInterval = Mathf.Max(spawnIntervalMin,
-                baseSpawnInterval - (distanceTravelled * spawnIntervalScaleFactor));
-            _timeSinceLastSpawn += Time.deltaTime;
 
-            if (_timeSinceLastSpawn >= _currentSpawnInterval && !_isGameEnded)
+            currentSpawnInterval = Mathf.Max(minSpawnInterval, baseSpawnInterval - (distanceTravelled * spawnIntervalFactor));
+            timeSinceLastSpawn += Time.deltaTime;
+
+            if (timeSinceLastSpawn >= currentSpawnInterval && !isGameEnded)
             {
-                _pool.Get();
-                _timeSinceLastSpawn = 0f;
+                pool.Get();
+                timeSinceLastSpawn = 0;
             }
         }
 
-        private void ShootAsteroid(Asteroid asteroid)
+        protected virtual void SpawnObject()
         {
-            var asteroidScript = asteroid.GetComponent<Asteroid>();
-
-            if (asteroidScript != null)
-            {
-                asteroidScript.Initialize(player, _currentAsteroidSpeed);
-            }
+            var i = Random.Range(0, spawnedObjects.Count);
+            var tree = Instantiate(spawnedObjects[i], RandomSpawnPosition(), Quaternion.identity);
         }
-
-        public void OnGameEnd()
-        {
-            _isGameEnded = true;
-        }
+        
+        protected abstract void SetPool(T objectToPool);
     }
 }

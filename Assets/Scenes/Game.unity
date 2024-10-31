@@ -2380,7 +2380,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 3125566220050524086, guid: 8ac3f324bdf210a4faafa9589aca9111, type: 3}
   mousePosition: {x: 0, y: 0, z: 0}
-  cooldown: 0.2
+  cooldown: 0.3
   shootingSfx: {fileID: 8300000, guid: 7cc523979fce1ca43aefc1a20465bc4b, type: 3}
 --- !u!114 &716155591
 MonoBehaviour:
@@ -5690,7 +5690,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1772826350
 Transform:
   m_ObjectHideFlags: 0
@@ -5718,13 +5718,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 584197123f68a0348bb7d0d1f535a76e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  treePrefabs:
-  - {fileID: 4905557398804842524, guid: 2a5ac33c955709147867a16fe01d3d9b, type: 3}
-  - {fileID: 4036070221343411726, guid: c8df338c8e723954fbce0713a7b6bc47, type: 3}
-  treeSpeed: 6
-  baseSpawnInterval: 5
-  spawnIntervalMin: 0.5
-  spawnIntervalScaleFactor: 0.001
+  spawnedObjects:
+  - {fileID: 3775336462683037835, guid: c8df338c8e723954fbce0713a7b6bc47, type: 3}
+  - {fileID: 3247105400875909588, guid: 2a5ac33c955709147867a16fe01d3d9b, type: 3}
+  baseObjectSpeed: 6
+  baseSpawnInterval: 6
+  minSpawnInterval: 0.5
+  speedScaleFactor: 0
+  spawnIntervalFactor: 0.001
+  maxSpawnY: -4.75
+  minSpawnY: -4.75
+  cloudSpeed: 5
 --- !u!1 &1776032530
 GameObject:
   m_ObjectHideFlags: 0

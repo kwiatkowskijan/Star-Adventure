@@ -20,8 +20,8 @@ namespace StarAdventure.Spawners
         [SerializeField] protected float minSpawnY;
         
         protected float currentObjectSpeed;
-        protected float currentSpawnInterval;
-        protected float timeSinceLastSpawn;
+        private float currentSpawnInterval;
+        private float timeSinceLastSpawn;
 
         protected virtual void Start()
         {
@@ -37,9 +37,7 @@ namespace StarAdventure.Spawners
 
         protected virtual T CreateObject()
         {
-            T obj = Instantiate(spawnedObjects[RandomObject()], RandomSpawnPosition(),
-                this.transform.rotation);
-            //ShootAsteroid(asteroid);
+            T obj = Instantiate(spawnedObjects[RandomObject()], RandomSpawnPosition(), this.transform.rotation);
             SetPool(obj);
             return obj;    
         }
@@ -75,7 +73,8 @@ namespace StarAdventure.Spawners
         protected virtual void ScaleSpawnInterval()
         {
             float distanceTravelled = GameManager.Instance.DistanceTravelled;
-
+            
+            currentObjectSpeed = baseObjectSpeed + (distanceTravelled * speedScaleFactor);
             currentSpawnInterval = Mathf.Max(minSpawnInterval, baseSpawnInterval - (distanceTravelled * spawnIntervalFactor));
             timeSinceLastSpawn += Time.deltaTime;
 
@@ -84,12 +83,6 @@ namespace StarAdventure.Spawners
                 pool.Get();
                 timeSinceLastSpawn = 0;
             }
-        }
-
-        protected virtual void SpawnObject()
-        {
-            var i = Random.Range(0, spawnedObjects.Count);
-            var tree = Instantiate(spawnedObjects[i], RandomSpawnPosition(), Quaternion.identity);
         }
         
         protected abstract void SetPool(T objectToPool);

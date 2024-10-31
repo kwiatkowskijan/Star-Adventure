@@ -1,6 +1,7 @@
 using StarAdventure.Interface;
 using UnityEngine;
 using StarAdventure.Managers;
+using UnityEngine.Pool;
 
 namespace StarAdventure.Obstacles
 {
@@ -9,6 +10,7 @@ namespace StarAdventure.Obstacles
         [HideInInspector] public float treeSpeed;
         private const int _damage = 1;
         private bool _isGameEnded = false;
+        private ObjectPool<Tree> _objectPool;
         void Start()
         {
             GameManager.Instance.RegisterListener(this);
@@ -17,6 +19,16 @@ namespace StarAdventure.Obstacles
         void Update()
         {
             MoveTree();
+        }
+
+        public void SetPool(ObjectPool<Tree> objectPool)
+        {
+            _objectPool = objectPool;
+        }
+        
+        public void Initialize(float speed)
+        {
+            treeSpeed = speed;
         }
 
         private void OnTriggerEnter2D(Collider2D collision)
@@ -37,7 +49,7 @@ namespace StarAdventure.Obstacles
         }
         private void OnBecameInvisible()
         {
-            Destroy(this.gameObject);
+            _objectPool.Release(this);
         }
 
         public void OnGameEnd()

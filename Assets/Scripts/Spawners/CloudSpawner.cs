@@ -17,10 +17,10 @@ namespace StarAdventure.Spawners
         protected override void OnTakeFromPool(Cloud cloud)
         {
             base.OnTakeFromPool(cloud);
-            MoveCloud(cloud);
+            Initialize(cloud);
         }
 
-        private void MoveCloud(Cloud cloud)
+        private void Initialize(Cloud cloud)
         {
             var cloudScript = cloud.GetComponent<Cloud>();
 

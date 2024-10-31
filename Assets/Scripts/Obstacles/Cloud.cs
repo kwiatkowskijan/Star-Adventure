@@ -1,4 +1,3 @@
-using System;
 using StarAdventure.Interface;
 using StarAdventure.Managers;
 using UnityEngine;
@@ -10,8 +9,7 @@ namespace StarAdventure.Obstacles
     {
         [HideInInspector] public float cloudSpeed;
         private const int _damage = 1;
-        private bool _isGameEnded = false;
-        
+        private bool _isGameEnded;
         private ObjectPool<Cloud> cloudPool;
         public void SetPool(ObjectPool<Cloud> pool)
         {
@@ -51,12 +49,12 @@ namespace StarAdventure.Obstacles
         }
         private void OnBecameInvisible()
         {
-            Destroy(this.gameObject);
+            cloudPool.Release(this);
         }
 
         public void OnGameEnd()
         {
-            
+            StopCloud();
         }
     }
 }

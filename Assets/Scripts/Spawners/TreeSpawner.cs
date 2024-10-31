@@ -1,60 +1,43 @@
-using System.Collections.Generic;
 using StarAdventure.Interface;
 using StarAdventure.Managers;
 using UnityEngine;
-using Random = UnityEngine.Random;
 using Tree = StarAdventure.Obstacles.Tree;
 
 namespace StarAdventure.Spawners
 {
-    public class TreeSpawner : MonoBehaviour, IGameEndListener
+    public class TreeSpawner : Spawner<Tree>, IGameEndListener
     {
-        [SerializeField] private List<GameObject> treePrefabs = new List<GameObject>();
-        [SerializeField] private float treeSpeed;
-        [SerializeField] private float baseSpawnInterval;
-        [SerializeField] private float spawnIntervalMin = 0.5f;
-        [SerializeField] private float spawnIntervalScaleFactor = 0.001f;
+        [SerializeField] private float cloudSpeed;
 
-        private float _currentSpawnInterval;
-        private float _timeSinceLastSpawn;
-
-        private bool _isGameEnded = false;
-        void Start()
+        protected override void Start()
         {
+            base.Start();
             GameManager.Instance.RegisterListener(this);
-            _currentSpawnInterval = baseSpawnInterval;
+        }
+        protected override void OnTakeFromPool(Tree tree)
+        {
+            base.OnTakeFromPool(tree);
+            Initialize(tree);
         }
 
-        void Update()
+        private void Initialize(Tree cloud)
         {
-            ScaleTreeSpawnInterval();
-        }
+            var cloudScript = cloud.GetComponent<Tree>();
 
-        private void ScaleTreeSpawnInterval()
-        {
-            float distanceTravelled = GameManager.Instance.DistanceTravelled;
-
-            _currentSpawnInterval = Mathf.Max(spawnIntervalMin, baseSpawnInterval - (distanceTravelled * spawnIntervalScaleFactor));
-            _timeSinceLastSpawn += Time.deltaTime;
-
-            if (_timeSinceLastSpawn >= _currentSpawnInterval && !_isGameEnded)
+            if (cloudScript != null)
             {
-                SpawnTree();
-                _timeSinceLastSpawn = 0f;
+                cloudScript.Initialize(cloudSpeed);
             }
         }
 
-        private void SpawnTree()
+        protected override void SetPool(Tree tree)
         {
-            var i = Random.Range(0, treePrefabs.Count);
-            var tree = Instantiate(treePrefabs[i], this.transform.position, Quaternion.identity);
-            Tree treeComponent = tree.GetComponent<Tree>();
-            treeComponent.treeSpeed = treeSpeed;
+            tree.SetPool(pool);
         }
 
         public void OnGameEnd()
         {
-            _isGameEnded = true;
+            isGameEnded = true;
         }
     }
 }

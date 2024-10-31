@@ -8,7 +8,7 @@ namespace StarAdventure.Obstacles
     public class Asteroid : MonoBehaviour
     {
         private float _asteroidSpeed;
-        private GameObject _player;
+        private Transform _player;
         private Vector2 _lastPlayerPosition;
         private int _health;
         private Animator _animator;
@@ -27,22 +27,44 @@ namespace StarAdventure.Obstacles
 
         private void Start()
         {
-            GetLastPlayerPosition();
             _health = 1;
             _point = 1;
-            _dead = false;
             _damage = 1;
+            _dead = false;
         }
 
         private void OnEnable()
         {
             _dead = false;
-            GetLastPlayerPosition();
         }
 
         private void Update()
         {
             ShootAsteroid();
+        }
+        
+        public void SetPool(ObjectPool<Asteroid> pool)
+        {
+            _pool = pool;
+        }
+        
+        public void Initialize(Transform player, float speed, Vector2 lastPlayerPosition)
+        {
+            _player = player;
+            _asteroidSpeed = speed;
+            _lastPlayerPosition = lastPlayerPosition;
+        }
+        
+        private void ShootAsteroid()
+        {
+            var step = _asteroidSpeed * Time.deltaTime;
+
+            if (_direction == Vector2.zero)
+            {
+                _direction = (_lastPlayerPosition - (Vector2)transform.position).normalized;
+            }
+
+            transform.position += (Vector3)(_direction * step);
         }
 
         private void OnTriggerEnter2D(Collider2D collision)
@@ -57,38 +79,8 @@ namespace StarAdventure.Obstacles
                 GameManager.Instance.PlayerHealth -= _damage;
         }
 
-        public void SetPool(ObjectPool<Asteroid> pool)
-        {
-            _pool = pool;
-        }
 
-        public void Initialize(GameObject player, float speed)
-        {
-            _player = player;
-            _asteroidSpeed = speed;
-        }
-
-        private Vector2 GetLastPlayerPosition()
-        {
-            _lastPlayerPosition = _player.transform.position;
-            Debug.Log(_lastPlayerPosition);
-            return _lastPlayerPosition;
-        }
-
-        private void ShootAsteroid()
-        {
-            var step = _asteroidSpeed * Time.deltaTime;
-
-            if (_direction == Vector2.zero)
-            {
-                _direction = (_lastPlayerPosition - (Vector2)transform.position).normalized;
-            }
-
-            transform.position += (Vector3)(_direction * step);
-        }
-
-
-        public void GetDamage(int damage)
+        private void GetDamage(int damage)
         {
             _health -= damage;
 

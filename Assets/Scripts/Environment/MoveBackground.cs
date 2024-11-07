@@ -2,7 +2,7 @@ using StarAdventure.Interface;
 using StarAdventure.Managers;
 using UnityEngine;
 
-namespace StarAdventure
+namespace StarAdventure.Environment
 {
     public class MoveBackground : MonoBehaviour, IGameEndListener
     {

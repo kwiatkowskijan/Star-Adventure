@@ -3,7 +3,7 @@ using Dan.Main;
 using TMPro;
 using UnityEngine;
 
-namespace StarAdventure
+namespace StarAdventure.Leaderboard
 {
     public class Leaderboard : MonoBehaviour
     {

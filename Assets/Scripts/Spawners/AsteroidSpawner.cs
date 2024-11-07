@@ -15,6 +15,7 @@ namespace StarAdventure.Spawners
             base.Start();
             GameManager.Instance.RegisterListener(this);
         }
+        
         protected override void OnTakeFromPool(Asteroid asteroid)
         {
             Initialize(asteroid);
@@ -27,11 +28,11 @@ namespace StarAdventure.Spawners
 
             if (asteroidScript != null)
             {
-                asteroidScript.Initialize(player, baseObjectSpeed, GetLastPlayerPosition());
+                asteroidScript.Initialize(currentObjectSpeed, GetLastPlayerPosition());
             }
         }
         
-        private Vector2 GetLastPlayerPosition()
+        private Vector3 GetLastPlayerPosition()
         {
             _lastPlayerPosition = player.position;
             Debug.Log(_lastPlayerPosition);

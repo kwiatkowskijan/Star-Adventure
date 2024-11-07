@@ -3,7 +3,7 @@ using StarAdventure.Managers;
 using TMPro;
 using UnityEngine;
 
-namespace StarAdventure
+namespace StarAdventure.UI
 {
     public class UiManager : MonoBehaviour, IGameEndListener
     {

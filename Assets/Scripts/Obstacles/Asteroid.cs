@@ -1,3 +1,4 @@
+using System;
 using StarAdventure.Managers;
 using StarAdventure.Player;
 using UnityEngine;
@@ -8,7 +9,6 @@ namespace StarAdventure.Obstacles
     public class Asteroid : MonoBehaviour
     {
         private float _asteroidSpeed;
-        private Transform _player;
         private Vector2 _lastPlayerPosition;
         private int _health;
         private Animator _animator;
@@ -24,20 +24,7 @@ namespace StarAdventure.Obstacles
             _animator = GetComponent<Animator>();
             circleCollider = GetComponent<CircleCollider2D>();
         }
-
-        private void Start()
-        {
-            _health = 1;
-            _point = 1;
-            _damage = 1;
-            _dead = false;
-        }
-
-        private void OnEnable()
-        {
-            _dead = false;
-        }
-
+        
         private void Update()
         {
             ShootAsteroid();
@@ -48,11 +35,16 @@ namespace StarAdventure.Obstacles
             _pool = pool;
         }
         
-        public void Initialize(Transform player, float speed, Vector2 lastPlayerPosition)
+        public void Initialize(float speed, Vector2 lastPlayerPosition)
         {
-            _player = player;
             _asteroidSpeed = speed;
             _lastPlayerPosition = lastPlayerPosition;
+            _direction = Vector2.zero;
+            _health = 1;
+            _point = 1;
+            _damage = 1;
+            _dead = false;
+            circleCollider.enabled = true;
         }
         
         private void ShootAsteroid()
